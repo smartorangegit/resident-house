@@ -1,0 +1,28 @@
+#RewriteCond %{REQUEST_URI} !\?
+#RewriteCond %{REQUEST_URI} !\&
+#RewriteCond %{REQUEST_URI} !\=
+#RewriteCond %{REQUEST_URI} !\.
+#RewriteCond %{REQUEST_URI} !\/$
+
+
+RewriteEngine On
+
+
+<FilesMatch .(json|cur|ico|png|pdf)$> 
+RewriteEngine off 
+
+</FilesMatch>
+
+<FilesMatch "(ajax|inv|application|some|update_news|update_hod|multy_img|del_img_hod|del_empty|pdf-save-application).php"> 
+RewriteEngine off 
+</FilesMatch>
+
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$
+RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
+
+#RewriteRule ^(.*[^\/])$ /$1/ [R=301,L]
+RewriteRule ^(.*)$ index.php?%{REQUEST_URI} [QSA,L]
+
+
+

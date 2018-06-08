@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /*from=adwords
+Disallow: /*gclid=
+Disallow: /*utm_source=
+Sitemap: http://resident.house/sitemap.xml
