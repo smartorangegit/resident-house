@@ -7,6 +7,9 @@
 full-site/img
 full-site/video
 full-site/pdf
+full-site/modules/config.php
+full-site/modules/application.php
+full-site/admin/bd.php
 
 
 
