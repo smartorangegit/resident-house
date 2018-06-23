@@ -1,0 +1,308 @@
+@import "vars"
+
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close
+  color: #3F3F3F
+  cursor: pointer !important
+
+.construction
+  width: 100%
+  min-height: 100vh
+  background-color: #f4ede7
+  padding-top: 100px
+  padding-bottom: 40px
+  &__inner
+    +inner
+
+  &__description
+    +bWidth(900, 1180)
+    margin: 0 auto
+    display: flex
+    justify-content: flex-start
+    align-items: stretch
+
+    height: 100%
+    flex-wrap: wrap
+
+  &__left
+    +bWidth(430, 900)
+    height: 240px
+    margin-top: -231px
+    order: 2
+    padding-right: 10px
+
+  &__center
+    width: 100%
+
+  &__right
+    order: 1
+    width: 100%
+    align-self: flex-end
+
+  &__text
+    display: flex
+    justify-content: space-between
+
+  &__left-text-wrap
+    width: 45%
+    display: flex
+    flex-direction: column
+
+  &__top-text-wrap 
+    flex: 1 0 auto
+
+  &__slider-title
+    margin: 20px 0px
+
+  &__slider-date 
+    float: right
+
+  &__temp
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+    .construction__info
+      max-height: 170px
+      overflow: hidden
+      img 
+        height: auto
+        width: 100%
+  //====================================
+  &__page-top
+    text-align: center
+    margin-bottom: 40px
+  &__heading
+    +fonts($ZI, $main-color, 48, 50, 25)
+
+  //====================================
+  &__slider
+    width: 100%
+    .slick-prev
+      width: 40px
+      height: 25px
+      z-index: 100
+      top: 38%
+      &::before
+        content: ''
+        width: 8px
+        height: 15px
+        position: absolute
+        right: 100%
+        background: url("../img/construction/arrow_left_icon.png") no-repeat center top / cover
+    .slick-next
+      width: 40px
+      height: 25px
+      bottom: -15px
+      top: 38%
+      z-index: 100
+      &::before
+        content: ''
+        width: 8px
+        height: 15px
+        position: absolute
+        right: -8px
+        background: url("../img/construction/arrow_right_icon.png") no-repeat center top / cover
+
+  &__slide
+    width: 100%
+  &__info
+    padding: 5px
+    border: 1px solid #ebe1d9 
+    margin-bottom: 10px
+    display: flex
+    justify-content: flex-start
+    align-self: stretch
+    img
+      +img-respons
+      height: 100%
+  &__info-right
+    border: 1px solid #ebe1d9
+    border-left: none
+    box-sizing: border-box
+    padding: 0 15px
+    position: absolute
+    top: 10px
+    left: 10px
+    font-size: 27px
+    padding: 5px
+    background-color: rgba(255, 255, 255, .7)
+
+  &__data-time
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__data,
+  &__time
+    +fonts($EG_Bold, $main-color, 10, 10, 25)
+  &__info-caption
+    +fonts($EG_Bold, $main-color, 18, 30, 25)
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+  &__info-text
+    +fonts($R_Reg, #596472, 12, 20, 25)
+    height: 100px
+    text-align: justify
+    overflow-y: auto
+
+  //====================================
+  &__web_btn-wrap
+    width: 100%
+    margin: 15px auto 0
+  &__web_btn
+    +aBtn
+    +fonts($EG_Bold, #fff, 14, 16, 100)
+    text-transform: uppercase
+    box-sizing: border-box
+    padding: 14px 0
+    background-color: #f0ae76
+    border-left: 3px solid #2b2e34
+    transition: all 1s
+    &:hover
+      text-decoration: underline
+      transition: all 1s
+      text-shadow: 0 1px 3px #fff
+
+//====================================
+//====================================
+
+.webcam_bg
+  &::before
+    display: inline-block
+    vertical-align: top
+    content: ''
+    width: 20px
+    height: 20px
+    background-image: url('../img/construction/webcam.png')
+    background-repeat: no-repeat
+    background-position: center
+
+.pan_bg
+  &::before
+    display: inline-block
+    vertical-align: top
+    content: ''
+    width: 20px
+    height: 20px
+    background-image: url('../img/construction/pan.png')
+    background-repeat: no-repeat
+    background-position: center
+
+.status-bar
+  width: 100%
+  margin: 15px auto
+  &__inner
+    width: 100%
+  &__box-wrap
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: nowrap
+    padding: 6px 0
+  &__text
+    min-width: 120px
+    +fonts($EG_Bold, $main-color, 18, 25, 25)
+    text-align: right
+    padding-right: 15px
+  &__status-wrap
+    +bWidth(320, 440)
+    border: 1px solid #ebe1d9
+    position: relative
+    z-index: 3
+    &::before
+      content: ''
+      position: absolute
+      width: 50%
+      height: 26px
+      top: -1px
+      left: -1px
+      background-color: #f0ae76
+      z-index: 1
+  &__status
+    +fonts($R_Reg, #596472, 12, 24, 25)
+    text-align: center
+    position: relative
+    z-index: 4
+
+//====================================
+
+//====================================
+
+/*==========  Desktop First  ==========*/
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px)
+  /**/
+  .construction__heading
+    +fonts($ZI, $main-color, 36, 50, 25)
+
+  .construction__info-right
+    padding: 0 5px
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px)
+  /**/
+  .construction__center
+    width: 100%
+    margin-bottom: 30px
+    text-align: center
+    padding: 0
+
+  .construction__page-top
+    text-align: center
+
+  .construction__left
+    width: 50%
+    height: auto
+    order: 1
+    margin-top: 0
+    align-self: stretch
+  .construction__right
+    order: 2
+    align-self: stretch
+    height: auto
+
+  .status-bar__box-wrap
+    flex-wrap: wrap
+    padding: 0
+  .status-bar__text
+    width: 100%
+    text-align: center
+    padding: 0 0 5px 0
+
+  .status-bar__status-wrap
+    width: 100%
+
+  .construction__info
+    flex-wrap: wrap
+    align-items: flex-start
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 600px)
+  /**/
+  .construction
+    padding-top: 60px
+  .construction__description
+    width: 90%
+    &__temp
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px)
+  /**/
+  .construction__description
+    width: 100%
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 380px)
+  /**/
+  .construction__info-left
+    height: 40%
+
+  .construction__info-text
+    height: 110px
+
+	
+	
+.construction__info
+	position: relative

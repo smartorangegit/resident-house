@@ -1,0 +1,85 @@
+@import "vars"
+
+.page404
+	position: relative
+	width: 100%
+	height: 100vh
+	z-index: 1
+	&::before
+		content: ''
+		width: 100%
+		height: 100%
+		background: url("../img/404/404_bg.png") no-repeat center center / cover
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		margin: auto
+
+	&__inner
+		width: 300px
+		height: 300px
+		border-radius: 50%
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		text-align: center
+		padding: 50px 0
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-self: center
+
+	&__heading
+		width: 100%
+		+fonts($ZI, $main-color, 100, 80, 25)
+	&__text-wrap
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			top: 5px
+			left: 0
+			right: 0
+			margin: auto
+			width: 80px
+			height: 1px
+			background-color: #f0ae76
+
+	&__description
+		+fonts($EG_Bold, $main-color, 30, 42, 25)
+	&__text
+		+fonts($R_Reg, #596472, 12, 24, 25)
+
+	&__link-wrap
+		width: 80%
+		margin: 20px auto 10px
+		display: flex
+		justify-content: space-around
+	&__link
+		+fonts($R_Reg, #596472, 12, 24, 25)
+		+aBtn
+		display: inline-block
+		padding-bottom: 3px
+		border-bottom: 1px solid #596472
+		transition: all 1s
+		&:hover
+			font-size: 13px
+			transition: all .8s
+			border-bottom: 3px solid #596472
+
+//====================================
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+	.page404::before
+		background: url("../img/404/404_bg_tablet.png") no-repeat center center / cover
+		height: 700px
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 600px)
+	/**/
+	.page404::before
+		background: url("../img/404/404_bg_tablet.png") no-repeat center center / cover

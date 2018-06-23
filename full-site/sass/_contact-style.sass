@@ -1,0 +1,299 @@
+@import "vars"
+
+.contact
+  .intl-tel-input
+    width: 31.66227%
+    height: 50px
+    margin-bottom: 10px
+    .contact__form-input
+      width: 100%
+  width: 100%
+  min-height: 100vh
+  padding-top: 80px
+  padding-bottom: 40px
+  background-color: #f4ede7
+  display: flex
+  flex-direction: column
+  &__inner
+    max-width: 900px
+    width: 100%
+
+    margin: 0 auto
+    flex: 1
+    display: flex
+    justify-content: center
+
+    align-items: center
+    flex-direction: column
+  //===========================
+  &__page-heading
+    width: 100%
+    text-align: center
+    position: relative
+    z-index: 2
+    &::before
+      content: ''
+      width: 340px
+      height: 340px
+      border: 1px solid $border-color
+      border-radius: 50%
+      position: absolute
+      z-index: -1
+      top: 0
+      left: 50%
+      transform: translate(-50%, 0)
+    &::after
+      content: ''
+      width: 324px
+      height: 324px
+      border: 1px solid $border-color
+      border-radius: 50%
+      position: absolute
+      z-index: -1
+      top: 8px
+      left: 50%
+      transform: translate(-50%, 0)
+  &__page-heading-top
+    width: 100%
+    opacity: 0
+  &__heading
+    +fonts($ZI, $main-color, 72, 60, 25)
+    text-transform: uppercase
+  &__page-heading-bot
+    width: 100%
+    position: relative
+    opacity: 0
+    &::before
+      content: ''
+      height: 1px
+      width: 80px
+      background-color: #f0ae76
+      position: absolute
+      top: 60%
+      left: 15%
+    &::after
+      content: ''
+      height: 1px
+      width: 80px
+      background-color: #f0ae76
+      position: absolute
+      top: 60%
+      right: 15%
+  &__caption
+    +fonts($EG_Bold, $main-color, 30, 52, 25)
+  //===========================
+  &__form-wrap
+    position: relative
+    background-color: #f4ede7
+    z-index: 5
+    width: 100%
+    box-sizing: border-box
+    border: 1px solid #ebe1d9
+    padding: 25px 30px 20px
+    opacity: 0
+  &__form
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-self: flex-start
+    flex-wrap: wrap
+  &__form-input
+    border: 1px solid #b2b2b2
+    background-color: transparent
+    +bWidth(240, 758)
+    box-sizing: border-box
+    +fonts($R_Reg, #000, 14, 30, 25)
+    font-weight: 300
+    font-style: italic
+    padding: 9px 0 9px 20px
+    margin-bottom: 15px
+    position: relative
+    z-index: 1
+    &::after
+      content: '*'
+      position: absolute
+      top: 0
+      right: 0
+      z-index: 10
+  &__message
+    width: 100%
+    background-color: transparent
+    margin-bottom: 15px
+    padding-top: 20px
+    padding-left: 20px
+    height: 120px
+    +fonts($R_Reg, #000, 14, 30, 25)
+    font-weight: 300
+    font-style: italic
+
+  &__form-btn
+    +aBtn
+    width: 440px
+    +fonts($EG_Bold, #fff, 20, 36, 100)
+    text-transform: uppercase
+    box-sizing: border-box
+    padding: 14px 0
+    background-color: #f0ae76
+    border: none
+    border-left: 3px solid #2b2e34
+    outline: none
+    margin: 0 auto
+
+  //===========================
+  &__list-wrap
+    width: 100%
+    margin: 40px auto 0
+    padding: 0 10px
+    opacity: 0
+  &__list
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__item
+    align-self: flex-start
+  &__item-caption
+    +fonts($EG_Bold, $main-color, 18, 24, 50)
+    text-transform: uppercase
+  &__item-text
+    +fonts($R_Reg, #596472, 12, 30, 25)
+    display: block
+    padding-left: 40px
+    position: relative
+
+[data-contact-text="1"]
+  &::before
+    content: ''
+    background: url("../img/top_icon/phone_icon.png") no-repeat center top
+    width: 22px
+    height: 23px
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translate(0, -50%)
+
+[data-contact-text="2"]
+  width: 240px
+  &::before
+    content: ''
+    background: url("../img/top_icon/map_icon.png") no-repeat center top
+    width: 22px
+    height: 23px
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translate(0, -50%)
+
+[data-contact-text="3"]
+  &::before
+    content: ''
+    background: url("../img/top_icon/mail_icon.png") no-repeat center top
+    width: 22px
+    height: 23px
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translate(0, -50%)
+.contact__rieltors-btn
+  display: inline-block
+  text-decoration: none
+  padding: 5px
+  width: 100%
+  height: 30px
+  line-height: 20px
+  background-color: #f0ae76
+  border-left: 3px solid #2b2e34
+  text-align: center
+  color: #fff
+
+
+.anim
+  .contact__page-heading-top
+    opacity: 1
+    transition: opacity 1s linear .5s
+  .contact__page-heading-bot
+    opacity: 1
+    transition: opacity 1s linear .7s
+  .contact__form-wrap
+    opacity: 1
+    transition: opacity 1s linear 1s
+  .contact__list-wrap
+    opacity: 1
+    transition: opacity 1s linear 1.2s
+
+.collaboration_btn
+  padding: 2px 0px
+//====================================
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px)
+  /**/
+  .contact__form-wrap
+    width: 80%
+    margin: 0 auto
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px)
+  /**/
+  .contact__form-input
+    margin-bottom: 45px
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px)
+  /**/
+  .contact__form-wrap
+    padding: 15px
+  .contact__form-input
+    width: 100%
+    margin-bottom: 10px
+  .contact
+    .intl-tel-input
+      width: 100%
+  .contact__form-wrap
+    width: 70%
+  .contact__form-btn
+    padding: 10px 0
+  .contact__page-heading-bot::before,
+  .contact__page-heading-bot::after
+    display: none
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 750px)
+  /**/
+  .contact__inner
+    padding: 60px 40px 0
+  .contact__list
+    display: none
+/* Small Devices, Tablets */
+@media only screen and (max-width: 600px)
+  /**/
+  .contact__inner
+    padding: 60px 25px 0
+  .contact__form-wrap
+    padding: 5px
+    width: 96%
+  .contact__form-input[type='tel']
+    margin-bottom: 10px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px)
+  /**/
+  .contact
+    padding-top: 50px
+  .contact__inner
+    padding: 0
+  .contact__page-heading::before
+    width: 280px
+    height: 280px
+  .contact__page-heading::after
+    width: 266px
+    height: 266px
+  .contact__heading
+    +fonts($ZI, $main-color, 36, 68, 25)
+  .contact__caption
+    +fonts($EG_Bold, $main-color, 24, 32, 25)
+  .contact__form-input
+    padding: 3px 0 3px 20px
+  .contact__form-btn
+    width: 100%
+    padding: 5px 0
+
+

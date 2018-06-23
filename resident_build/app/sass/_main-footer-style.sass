@@ -1,0 +1,65 @@
+@import "vars"
+
+.footer
+	background-color: rgba(#f4ede7, .8)
+	width: 100%
+	position: absolute
+	bottom: 0
+	z-index: 99
+	&__inner
+		width: 100%
+		padding: 0 30px
+		margin: 0 auto
+		display: flex
+		justify-content: space-between
+		align-items: center
+		position: relative
+
+	&__left,
+	&__rigth
+		width: 50%
+	&__text
+		+fonts($EG_Bold, $main-color, 12, 30, 50)
+
+.smart
+	width: 100%
+	&__logo-wrap
+		display: flex
+		justify-content: flex-end
+		align-items: center
+	&__text
+		+fonts($EG_Bold, $main-color, 12, 30, 50)
+	&__link
+		+aBtn
+		background: url("../img/smart_logo_ c.svg") no-repeat center top
+		width: 39px
+		height: 20px
+		text-indent: -99999px
+		margin-left: 15px
+
+/*==========  Desktop First  ==========*/
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 992px)
+	.footer__inner
+		padding: 0 15px
+@media only screen and (max-width: 768px)
+	/**/
+	.footer
+		position: relative
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 650px)
+	/**/
+	.footer__inner
+		flex-wrap: wrap
+		text-align: center
+	.footer__left
+		width: 100%
+	.footer__right
+		width: 100%
+	.smart__logo-wrap
+		justify-content: center
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px)
+	/**/
+	.footer__text
+		+fonts($EG_Bold, $main-color, 11, 16, 50)

@@ -1,0 +1,134 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px)
+  /**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px)
+  /**/
+  //min-height: 100vmax
+
+  .page-top__heading--manager
+    +fonts($ZI, $main-color, 48, 72, 25)
+
+  .page-top__caption--contact::before
+    left: 10%
+
+  .page-top__caption--contact::after
+    right: 10%
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px)
+  /**/
+  .page-heading
+    padding: 0
+    height: 110px
+  .page-heading::before
+    width: 300px
+    height: 300px
+  .page-heading::after
+    width: 285px
+    height: 285px
+
+  //==== style for center-btm-link
+  .center-btm-link
+    bottom: 50px
+  //==== /END style for right-btm-link
+
+  .page-top__caption--contact::before
+    left: 5%
+  .page-top__caption--contact::after
+    right: 5%
+/* Small Devices, Tablets */
+@media only screen and (max-width: 700px)
+  /**/
+
+  .page-top__caption--contact::before
+    width: 10%
+  .page-top__caption--contact::after
+    width: 10%
+
+  .page-top__heading--manager
+    +fonts($ZI, $main-color, 48, 100, 25)
+
+  .preloader__circle
+    &:nth-child(1)
+      display: none
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 600px)
+  /**/
+
+  .page-top__caption--contact::before,
+  .page-top__caption--contact::after
+    display: none
+
+  //==== style for left-btm-link
+  .left-btm-link
+    top: auto
+    bottom: 15px
+    padding-left: 0
+  .content__icon--arrow-left
+    position: relative
+    transform: rotate(-45deg)
+    top: 22px
+    left: 10px
+  .content__link--left
+    padding: 0
+    letter-spacing: .3em
+  //==== /END style for left-btm-link
+
+  //==== style for right-btm-link
+  .right-btm-link
+    top: auto
+    bottom: 15px
+    padding-right: 0
+  .content__icon--arrow-right
+    transform: rotate(45deg)
+    top: 10px
+  .content__link--right
+    padding-right: 15px
+    letter-spacing: .3em
+    line-height: 1
+  //==== /END style for right-btm-link
+
+  //==== style for phone-btm
+  [data-tel-link="mob"]
+    display: block
+  [data-tel-link="pc"]
+    display: none
+  //==== /END style for phone-btm
+  //======================
+  .main-form__title
+    font-size: 32px
+//======================
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px)
+  /**/
+  //==== style for content__link--center
+  .content__link--center
+    letter-spacing: .3em
+  //==== /END style for content__link--center
+
+  .page-heading
+    height: 80px
+  .page-top__heading--contact
+    font-size: 3em
+  .page-top__caption--contact
+    font-size: 1.5em
+    line-height: 1.2
+  .page-top__heading--manager
+    +fonts($ZI, $main-color, 36, 72, 25)
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px)
+  /**/
+  .page-heading::before
+    width: 260px
+    height: 260px
+  .page-heading::after
+    width: 245px
+    height: 245px

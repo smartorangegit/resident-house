@@ -1,0 +1,303 @@
+@import "vars"
+
+.values
+  width: 100%
+  background-color: #f4ede7
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+
+  &__inner
+    width: 100%
+    height: 100%
+    display: flex
+    flex: 1
+    justify-content: flex-start
+    align-items: center
+    position: relative
+
+  &__left,
+  &__right
+    width: 50%
+    height: 100%
+
+  &__left-inner
+    padding: 0 10px 0 0
+    width: 100%
+    max-width: 600px
+    margin: 0 0 0 auto
+
+  &__right
+    padding: 0
+  &__right-inner
+    width: 100%
+    min-height: 100%
+    text-align: center
+    overflow: hidden
+    line-height: 0
+    font-size: 0
+    background: url("../img/values_page/right_bg.jpg") no-repeat center top / cover
+
+  &__right-img
+    position: relative
+    display: inline-block
+    height: 100%
+    margin: 0 auto
+    transition: all 1.5s
+    transform-origin: 50% 100%
+    opacity: 1
+    svg
+      overflow: hidden
+      height: 100%
+      position: relative
+      width: auto
+      cursor: pointer
+    &::before
+      content: ''
+      width: 100%
+      height: 100%
+      left: 100%
+      background-color: #f4ede7
+      position: absolute
+      top: 0
+    &::after
+      content: ''
+      width: 100%
+      height: 100%
+      right: 100%
+      background-color: #f4ede7
+      position: absolute
+      top: 0
+    &:hover
+      transition: all 1.5s
+      opacity: 0
+
+  //===============================
+  &__page-heading
+    width: 100%
+    position: relative
+    z-index: 1
+    padding: 40px 0
+    &::before
+      content: ''
+      width: 216px
+      height: 216px
+      border: 1px solid $border-color
+      border-radius: 50%
+      position: absolute
+      z-index: -1
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+    &::after
+      content: ''
+      width: 198px
+      height: 198px
+      border: 1px solid $border-color
+      border-radius: 50%
+      position: absolute
+      z-index: -1
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+  &__page-heading-top
+    text-align: center
+    position: relative
+    z-index: 2
+    opacity: 0
+  &__heading
+    +fonts($ZI, $main-color, 72, 100, 25)
+  &__page-heading-bot
+    text-align: center
+    position: relative
+    z-index: 2
+    opacity: 0
+    &::before
+      content: ''
+      position: absolute
+      z-index: 2
+      top: 60%
+      left: 0
+      height: 1px
+      background-color: $orange-color
+      +bWidth(80, 600)
+    &::after
+      content: ''
+      position: absolute
+      z-index: 2
+      top: 60%
+      right: 0
+      height: 1px
+      background-color: $orange-color
+      +bWidth(80, 600)
+  &__caption
+    +fonts($EG_Bold, $main-color, 30, 40, 25)
+  //===============================
+  &__description-wrap
+    position: relative
+    z-index: 5
+    width: 100%
+    max-width: 600px
+    margin: 0 auto
+    padding: 0 20px
+    opacity: 0
+  &__description
+    width: 100%
+    margin: 0 auto
+    position: relative
+    z-index: 10
+    
+
+  &__description-text
+    +fonts($R_Reg, #596472, 12, 24, 25)
+    text-align: justify
+    margin-bottom: 10px
+  //===============================
+
+.anim
+  .values__page-heading-top
+    opacity: 1
+    transition: opacity 1s linear .5s
+  .values__page-heading-bot
+    opacity: 1
+    transition: opacity 1s linear .7s
+  .values__description-wrap
+    opacity: 1
+    transition: opacity 1s linear 1s
+//===============================
+//===============================
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px)
+  /**/
+  .values__left
+    min-height: 100vh
+    padding-top: 100px
+    padding-bottom: 40px
+    display: flex
+    flex-direction: column
+  .values__left-inner
+    flex: 1
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding-left: 20px
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 992px)
+  /**/
+  .values
+    height: 100%
+  .values__inner
+    align-items: stretch
+  .values__left
+    padding-top: 100px
+    padding-bottom: 40px
+    min-height: 100vh
+    display: flex
+  .values__left-inner
+    padding: 0 10px
+    width: 100%
+    min-height: 100%
+    max-width: 600px
+    margin: 0 0 0 auto
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  .values__page-heading
+    padding: 0
+    align-self: flex-start
+    margin-bottom: 40px
+
+  .values__description-wrap
+    margin: 0 auto 0
+    align-self: flex-end
+    padding: 0
+    width: 90%
+  
+/* Small Devices, Tablets */
+@media only screen and (max-width: 800px)
+  /**/
+  .values__heading
+    +fonts($ZI, $main-color, 60, 100, 25)
+  .values__page-heading-bot::before,
+  .values__page-heading-bot::after
+    display: none
+  .values__caption
+    +fonts($EG_Bold, $main-color, 28, 40, 25)
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px)
+  /**/
+  .values__left
+    padding-bottom: 0
+
+  .values__left-inner
+    margin-bottom: 40px
+  
+/* Small Devices, Tablets */
+@media only screen and (max-width: 600px)
+  /**/
+  .values__inner
+    flex-direction: column
+    padding-top: 55px
+    &:before
+      content: ''
+      position: absolute
+      pointer-events: none
+      z-index: 1
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 100px
+      background: linear-gradient(0deg, #f4ede7, transparent)
+  .values__left,
+  .values__right
+    width: 100%
+    height: 50%
+    min-height: 0
+  .values__left
+    padding-top: 0
+    display: block
+  .values__left-inner
+    margin-bottom: 0
+  .values__page-heading
+    padding: 0
+    margin-bottom: 0
+  .values__heading
+    line-height: .8
+
+  .values__page-heading::before
+    width: 200px
+    height: 200px
+    top: 0
+    transform: translate(-50%, 0)
+  .values__page-heading::after
+    width: 186px
+    height: 186px
+    top: 7px
+    transform: translate(-50%, 0)
+
+  .values__right-inner
+    //min-height: 315px
+  .values__right-img
+    svg
+      height: 400px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px)
+  /**/
+  .values
+    padding-top: 10px
+
+  .values__heading
+    +fonts($ZI, $main-color, 36, 44, 25)
+  .values__caption
+    +fonts($EG_Bold, $main-color, 24, 40, 25)
+
+  .values__right-inner
+    min-height: 0
+    height: 400px
+  .values__right-img
+    width: auto
+    height: 100%
+  

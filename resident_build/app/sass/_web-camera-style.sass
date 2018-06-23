@@ -1,0 +1,69 @@
+@import "vars"
+
+.web-cam
+  width: 100%
+  min-height: 100vh
+  background-color: #f4ede7
+  padding-top: 76px
+  padding-bottom: 40px
+  display: flex
+  flex-direction: column
+  &__inner
+    +inner
+    flex: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    text-align: center
+  &__page-top
+    +bWidth(900, 1180)
+    margin: 0 auto
+    text-align: center
+  &__heading
+    width: 100%
+    margin: 0 auto
+    +fonts($ZI, $main-color, 72, 130, 25)
+  //=================================
+  &__page-center
+    +bWidth(900, 1180)
+  &__caption
+    +fonts($EG_Bold, $main-color, 30, 45, 25)
+    text-transform: uppercase
+  //=================================
+  &__description
+    +fonts($EG_Bold, $main-color, 18, 45, 25)
+
+  &__text
+    +fonts($R_Reg, $main-color, 12, 24, 25)
+
+
+//=================================
+/*==========  Desktop First  ==========*/
+@media only screen and (max-width: 992px)
+  /**/
+
+
+@media only screen and (max-width: 768px)
+  /**/
+  .web-cam__heading
+    +fonts($ZI, $main-color, 56, 100, 25)
+  .web-cam__caption
+    +fonts($EG_Bold, $main-color, 24, 36, 25)
+
+@media only screen and (max-width: 768px)
+  /**/
+
+  .web-cam__heading
+    +fonts($ZI, $main-color, 36, 72, 25)
+  .web-cam__description
+    +fonts($EG_Bold, $main-color, 18, 24, 25)
+
+@media only screen and (max-width: 600px)
+  /**/
+
+  .web-cam__page-top,
+  .web-cam__page-center
+    width: 100%
+    margin-bottom: 20px

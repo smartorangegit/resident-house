@@ -1,0 +1,49 @@
+//fonts
+$R_Reg: "RobotoRegular", sans-serif
+$R_Bold: "RobotoBold", sans-serif
+$EG: "EngraversGothic", sans-serif
+$EG_Bold: "EngraversGothicBold", sans-serif
+$ZI: "ZamenhofInverse", sans-serif
+//color
+$main-color: #1a212a
+$bg-color: #f4ede7
+
+$orange-color: #f0ae76
+$border-color: #ebe1d9
+
+
+$mFs: 16 //main font-size
+
+=inner
+	width: 100%
+	max-width: 1200px
+	padding: 0 10px
+	margin: 0 auto
+	
+=clearfix
+	&::before,
+	&::after
+		content: ""
+		display: table
+	&::after
+		clear: both
+
+=img-respons
+	display: block
+	width: 100%
+	height: auto
+
+=bWidth($wTar, $wCon)
+	width: $wTar/$wCon * 100 + %
+
+=fonts($ff, $clr, $fs, $lh, $ltsp)
+	font-family: $ff
+	color: $clr
+	font-size: $fs/$mFs+em
+	line-height: ($lh/$fs)
+	letter-spacing: $ltsp/1000+em
+
+=aBtn
+	display: block
+	text-decoration: none
+	text-align: center

@@ -1,0 +1,40 @@
+.arrow_icon, .mail_icon, .map_icon, .menu_icon, .metro_icon, .phone_icon{
+	background: url(sprites.png) no-repeat;
+}
+
+.arrow_icon{
+	background-position: -17.000003814697266px -19px ;
+	width: 16px;
+	height: 10px;
+}
+
+.mail_icon{
+	background-position: -164.00000381469727px -12px ;
+	width: 23px;
+	height: 23px;
+}
+
+.map_icon{
+	background-position: -116.00000381469727px -14px ;
+	width: 16px;
+	height: 23px;
+}
+
+.menu_icon{
+	background-position: -207.00001907348633px -13px ;
+	width: 35px;
+	height: 23px;
+}
+
+.metro_icon{
+	background-position: -263.0000190734863px -17px ;
+	width: 25px;
+	height: 15px;
+}
+
+.phone_icon{
+	background-position: -63.000003814697266px -13px ;
+	width: 22px;
+	height: 23px;
+}
+

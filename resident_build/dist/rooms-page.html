@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>values page</title>
+  <meta name="description" content="">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <!--<meta property="og:image" content="path/to/image.jpg">-->
+
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+  <!---->
+  <link rel="stylesheet" href="libs/css-button/component.css">
+  <!---->
+  <link rel="stylesheet" href="libs/slick/slick.css">
+  <link rel="stylesheet" href="libs/slick/slick-advantage-theme.css">
+  <!---->
+  <link rel="stylesheet" href="libs/scrollpane/jscrollpane.css">
+  <!---->
+  <link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+<div class="all_wrapper">
+
+  <div class="preload">
+	<div class="preloader">
+	  <div class="preloader__circle-set">
+		<div class="preloader__circle"></div>
+		<div class="preloader__circle"></div>
+		<div class="preloader__circle"></div>
+		<div class="preloader__circle"></div>
+		<div class="moving__circle"></div>
+	  </div>
+	  <div class="preloader__inner">
+		<svg
+			class="preloader-svg"
+			width="320px"
+			height="280px"
+			viewBox="0 0 50 50"
+			version="1.1"
+			id="svg8">
+		  <defs id="defs2"/>
+		  <g
+			  id="layer1"
+			  fill-rule="evenodd"
+			  transform="translate(0,-247)"
+		  >
+			<path
+				style="stroke:none;"
+				d="m -0.46772167,246.6197 51.64983267,-0.20045 -0.400904,51.11528 -51.18211129,0.0668 z M 49.971111,272.07709 A 24.780958,24.780958 0 0 1 25.190153,296.85805 24.780958,24.780958 0 0 1 0.40919495,272.07709 24.780958,24.780958 0 0 1 25.190153,247.29613 24.780958,24.780958 0 0 1 49.971111,272.07709 Z"
+				id="rect12"/>
+		  </g>
+		</svg>
+		<div class="preload-parts top-part"></div>
+		<div class="preload-parts left-part"></div>
+		<div class="preload-parts bottom-part"></div>
+		<div class="preload-parts right-part"></div>
+	  </div>
+	</div>
+  </div>
+
+  <script>
+		if (sessionStorage.getItem('preloader')) {
+			document.querySelector('.preloader').remove()
+		}
+  </script>
+
+  <header class="top-head top-head--other">
+
+	<div class="menu">
+	  <div class="menu__inner">
+		<div class="menu__nav">
+		  <div class="top-menu">
+			<div class="top-menu__inner">
+			  <div class="top-menu__list-wrap">
+				<div class="top-menu__list">
+
+				  <div class="about">
+					<ul class="about__list">
+					  <li class="top-menu__heading">ПРО ПРОЕКТ:</li>
+					  <li class="about__item"><a class="about__link" href="404.html">Головна</a></li>
+					  <li class="about__item"><a class="about__link" href="404.html">Квартири</a></li>
+					  <li class="about__item"><a class="about__link" href="404.html">Будинок</a></li>
+					  <li class="about__item"><a class="about__link" href="404.html">Архітектура</a></li>
+					  <li class="about__item"><a class="about__link" href="404.html">Переваги</a></li>
+					  <li class="about__item"><a class="about__link" href="404.html">Розташування</a></li>
+					  <li class="about__item"><a class="about__link" href="404.html">Цінності</a></li>
+					  <li class="about__item"><a class="about__link" href="contact.html">Контакти</a></li>
+					</ul>
+				  </div>
+				  <!--/END about-->
+
+				  <div class="project">
+					<ul class="project__list">
+					  <li class="top-menu__heading">ХІД ПРОЕКТУ:</li>
+					  <li class="project__item">
+						<a class="project__link" href="404.html">Веб-камера</a>
+					  </li>
+					  <li class="project__item">
+						<a class="project__link" href="404.html">Забудовники</a>
+					  </li>
+					  <li class="project__item">
+						<a class="project__link" href="404.html">Новини</a>
+					  </li>
+					  <li class="project__item">
+						<a class="project__link" href="404.html">Будівництво</a>
+					  </li>
+					</ul>
+				  </div>
+				  <!--/END project-->
+
+				  <div class="close-btn-wrap">
+					<div class="close-btn">
+					  <h1>MENU</h1>
+					  <button class="btn-close"></button>
+					</div>
+				  </div>
+
+				  <div class="apartment">
+					<h2 class="apartment__heading">ОБРАТИ КВАРТИРУ:</h2>
+					<ul class="apartment__list">
+					  <li class="apartment__item"><a class="apartment__link" href="404.html">1-кімнатні</a></li>
+					  <li class="apartment__item"><a class="apartment__link" href="404.html">2-кімнатні</a></li>
+					  <li class="apartment__item"><a class="apartment__link" href="404.html">3-кімнатні</a></li>
+					  <li class="apartment__item"><a class="apartment__link" href="404.html">4-кімнатні</a></li>
+					</ul>
+					<ul class="apartment__list">
+					  <li class="apartment__item"><a class="apartment__link" href="404.html">Розстрочка</a></li>
+					  <li class="apartment__item"><a class="apartment__link" href="404.html">Комерційна нерухомість</a>
+					  </li>
+					  <li class="apartment__item"><a class="apartment__link" href="404.html">Юридична інформація</a>
+					  </li>
+					</ul>
+				  </div>
+				  <!--/END apartment-->
+
+				  <div class="for-sale">
+					<ul class="for-sale__list">
+					  <li class="for-sale__heading">ВІДДІЛ ПРОДАжУ:</li>
+					  <li class="for-sale__item" data-main__bot-item="1">
+						<a href="#" class="for-sale__link">вул. Володимирська 86</a>
+					  </li>
+					  <li class="for-sale__item" data-main__bot-item="2">
+						<a href="#" class="for-sale__link">Льва Толстого</a>
+					  </li>
+					  <li class="for-sale__item" data-main__bot-item="3">
+						<a href="#" class="for-sale__link">044 333 44 58</a>
+					  </li>
+					</ul>
+				  </div>
+				  <!--/END for-sale-->
+
+				  <div class="callback-wrap">
+					<div class="callback">
+					  <div class="callback__inner">
+						<i class="icon top-menu-icon"></i>
+						<span class="callback__text">Замовити зворотній дзвінок</span>
+					  </div>
+					</div>
+				  </div>
+
+				</div>
+			  </div>
+			</div>
+
+		  </div>
+		</div>
+		<div class="shape-wrap">
+		  <svg class="shape" width="100%" height="100vh" preserveAspectRatio="none" viewBox="0 0 1440 800"
+			   xmlns:pathdata="http://www.codrops.com/">
+			<path
+				d="M -65.11,-1.008 C -38.79,8.492 -48.8,43.89 -24.09,59.91 -17.38,64.25 -7.411,68.1 2.397,67.74 19.94,67.09 30.89,61.16 46.62,50.39 64.99,37.82 92.16,36.57 112.8,41.49 141.9,48.44 153.5,80.16 178.5,78.34 194.6,77.17 205.3,67.96 216.8,48.87 224.6,35.89 230.6,20.21 251.4,19.41 278.8,18.35 288.2,28.98 298.5,67.48 303.6,86.48 308.2,97.24 316.3,102.6 329.4,111.3 340.7,106 350.5,100.2 377.5,84.13 369.6,23.41 401.2,20.7 415.9,19.43 431.7,33.86 449.9,57.07 462.7,73.41 475.5,91.96 494.9,96.72 503.8,98.9 513,97.38 521.6,90.13 532.1,81.21 532.2,62.36 551.7,62.17 565.7,62.03 569.6,72.01 575.9,89 580.5,101.3 598.1,139.1 628.6,117.5 649.1,103 641.6,81.95 658,80.67 674.4,79.39 692.2,136.3 720.8,141.4 738.9,144.6 763.5,132 771.2,119.3 782.1,101.2 783.6,81.7 799.1,81.97 829.3,82.49 818.2,122.8 838.2,143.8 858.1,164.8 875.7,158.9 886.4,155.8 910.4,149 913.1,122.8 939.2,119.6 953.9,117.9 964.8,130.2 979.7,131.6 997.3,133.3 1016,132.6 1027,121 1038,109.3 1038,80.15 1054,79.92 1071,79.67 1073,89.94 1079,106.8 1084,119.5 1089,133.9 1101,141.1 1111,147.3 1124,146.3 1136,145 1150,143.4 1160,132.7 1177,130.8 1194,128.8 1219,128.2 1236,138.8 1257,151.6 1271,147.7 1280,137.3 1291,124.1 1294,92.34 1316,90.47 1344,88.04 1348,163.9 1380,183.1 1401,195.1 1428,196.6 1451,190.6 1478,183.7 1503,161.8 1518,143 1544,109.1 1550,43.89 1551,32.49 1568,-303.4 -510,-224.1 -65.11,-1.008 Z"
+				pathdata:id="M -35.73,45.41 C -9.412,61.01 -30.93,379.4 -17.31,545.8 -12.26,607.5 -54.94,740.4 6.142,730.1 63.67,720.4 26.97,284.9 27.01,202.3 27.06,104.3 51.66,29.07 106,54.36 160.3,79.65 103.7,491.7 187.7,465.7 231.9,452 156.6,99.89 249.4,94.08 285.7,91.81 299.9,127.5 305,190.9 316,327.7 328.6,462.6 321.1,598.3 315.8,695.4 294.5,776.7 353.9,773.6 415.6,770.4 379.8,650.7 368.7,588.8 337.4,415 369.6,190.1 391.1,111 412.5,31.92 457,96.83 463.3,127.2 480.9,212.1 493.9,307.8 489,396.1 487.4,425.7 482.1,460.1 517.1,455.2 548.5,450.7 476.2,166 550.9,168.9 594.8,170.6 591.6,626.8 586.3,663.5 578.4,717.8 609.1,742.4 633.9,700.6 651.9,670.2 578.3,209.7 650.8,194.1 723.2,178.5 700.8,277.9 687.6,401.1 680.2,470 766.1,486.3 756,414.3 750.3,373.5 703.1,145.6 793.4,146.1 939.9,146.8 846.2,556.8 844,601.8 841.9,646.8 878.6,682.8 903.3,630.6 928,578.4 863.2,264.8 891.7,178.8 920.2,92.81 997.3,215.6 972,292.8 946.6,370 1030,353.1 999,295.7 985.9,271.6 977.1,119.1 1048,117.8 1119,116.5 1127,634.6 1123,682.6 1119,730.6 1110,749.8 1118,771.3 1134,815.5 1173,803.5 1164,734 1155,664.5 1139,665.8 1143,418.4 1148,170.9 1225,122 1240,215 1249,273 1202,413 1282,391.7 1324,380.7 1280,165.5 1316,159.6 1362,152 1296,358.2 1379,361.2 1462,364.2 1312,753 1444,751.2 1592,749.2 1484,458.5 1505,312.2 1518,221.3 1544,58.44 1545,39.57 1562,-514.4 -480.6,-322.6 -35.73,45.41 Z"></path>
+		  </svg>
+		</div>
+	  </div>
+	</div>
+
+	<div class="top-head__inner">
+
+	  <div class="top-head__left">
+		<a href="index.html" class="top-head__logo">
+		  <img src="img/logo2.svg" alt="logo-icon">
+		</a>
+	  </div>
+
+	  <div class="top-head__right">
+		<nav class="navigation">
+		  <ul class="navigation__list">
+
+			<li class="navigation__item">
+			  <div class="lang">
+
+				<ul class="lang__list">
+				  <li class="lang__item" data-nav-item="1">
+					<a class="lang__link" href="#">Укр</a>
+				  </li>
+				  <li class="lang__item">
+					<a class="lang__link" data-nav-item="2" href="#">Рус</a>
+				  </li>
+				  <li class="lang__item" data-nav-item="3">
+					<a class="lang__link" href="#">Eng</a>
+				  </li>
+				</ul>
+
+			  </div>
+			</li>
+
+			<li class="navigation__item" id="form-call">
+			  <a href="#" class="navigation__link">
+				<i class="nav_icon phone_icon"></i>
+				<!--заказать звонок-->
+			  </a>
+			</li>
+			<li class="navigation__item">
+			  <a href="location.html" class="navigation__link">
+				<i class="nav_icon map_icon"></i>
+				<!--карта-->
+			  </a>
+			</li>
+			<li class="navigation__item">
+			  <a href="contact.html" class="navigation__link">
+				<i class="nav_icon mail_icon"></i>
+				<!--почта-->
+			  </a>
+			</li>
+			<li class="navigation__item" id="menu-btn">
+			  <a href="#" class="navigation__link">
+				<i class="nav_icon menu_icon"></i>
+			  </a>
+			</li>
+		  </ul>
+		</nav>
+	  </div>
+
+	</div>
+	<!--/END top-head__inner-->
+  </header>
+  <!--/END top-head-->
+
+  <main class="content" role="main">
+	<div class="content__inner pages">
+	  <!-- NAVIGATION LINK on page-->
+	  <div class="content__link-wrap left-btm-link nav-btn pagenav__button--left" data-page="location"
+		   data-position="left">
+		<a class="content__link" href="location.html">
+		  <i class="content__icon content__icon--arrow-left"></i>
+		  Локація
+		</a>
+	  </div>
+	  <div class="content__link-wrap right-btm-link nav-btn pagenav__button--right" data-page="apartments"
+		   data-position="right">
+		<a class="content__link content__link--right" href="404.html">
+		  Обрати квартиру
+		  <i class="content__icon content__icon--arrow-right"></i>
+		</a>
+	  </div>
+	  <div class="content__link-wrap center-btm-link nav-btn pagenav__button--bottom" data-page="advantage"
+		   data-position="bottom">
+		<a class="content__link content__link--center" href="advantage.html">
+		  <i class="content__icon content__icon--arrow-center"></i>
+		  Переваги
+		</a>
+	  </div>
+	  <!-- /END NAVIGATION LINK on page-->
+
+	  <!-- START page content code-->
+	  <div class="page page--current">
+		<div class="rooms">
+		  <div class="rooms__inner">
+
+			<div class="rooms__left">
+			  <div class="rooms__left-inner">
+
+				<div class="rooms__page-heading">
+				  <div class="rooms__page-heading-top">
+					<h1 class="rooms__heading">Квартири</h1>
+				  </div>
+				  <div class="rooms__page-heading-bot">
+					<h2 class="rooms__caption">Бажаєте обрати квартиру?</h2>
+				  </div>
+				</div>
+				<!--/END values__page-heading-->
+
+				<div class="rooms__description-wrap">
+				  <div class="rooms__description">
+					<p class="rooms__description-text">
+					  У RESIDENT Concept House розташовані всього 60 квартир, тому треба поквапитися,
+					  щоб стати одним з мешканців цього будинку.</p>
+					<p class="rooms__description-text">
+					  Частина квартир обладнана великими терасами із видом на вулицю Володимирську та
+					  Жилянську.
+					</p>
+					<p class="rooms__description-text">
+					  Обрати квартиру, яка відповідатиме усім вашим потребам, допоможуть дружні
+					  спеціалісти нашого відділу продажів.
+					</p>
+				  </div>
+				  <!--/END rooms__description-->
+
+				  <div class="rooms__link-wrap">
+					<a class="rooms__link" href="#">Обрати квартиру</a>
+				  </div>
+				  <!--/END rooms__link-wrap-->
+
+				</div>
+				<!--/END rooms__description-wrap-->
+
+			  </div>
+			  <!--/END rooms__left-inner-->
+			</div>
+			<!--/END rooms__left-->
+
+			<div class="rooms__right">
+			  <div class="rooms__right-inner">
+				<div class="rooms__right-img">
+				  <svg
+					  fill="#f4ede7"
+					  style="enable-background:new 0 0 595.3 841.9;"
+					  x="0px"
+					  y="0px"
+					  width="589"
+					  height="774"
+					  viewBox="0 0 589.98878 775.18357"
+					  fill-rule="evenodd"
+					  id="man-2--svg">
+					<g
+						id="g6"
+						transform="matrix(1.1759774,0,0,1.1759774,-55.15334,-135.61091)">
+					  <path
+						  d="m -27.74765,-26.97574 c 0,850.08709 0,847.56458 0,847.56458 h 650.80852 c 0,0 -2.52252,-845.042067 0,-845.042067 2.52251,0 -650.80852,-2.522513 -650.80852,-2.522513 z M 546.6,565.9 c -2.1,-8 -6.6,-15.4 -10.3,-22.9 -1.6,-3.2 -3.5,-6.6 -6.2,-8.9 -11.2,-9.3 -22.4,-18.9 -34.4,-27.2 -11.1,-7.7 -23.3,-13.9 -34.9,-20.9 -18.3,-10.9 -36.5,-21.9 -54.7,-32.8 -0.8,-0.5 -2,-0.9 -2.4,-1.6 -6.5,-10.7 -15.2,-20.2 -18.5,-32.8 -2.3,-8.6 -14.1,-11.8 -20.9,-5.7 3.7,9.9 5.1,7.4 -3,15 -7.1,6.7 -14.6,13.1 -22.2,19.3 -27.3,22.2 -52.3,47 -75.5,73.3 -18,20.4 -33.3,43.1 -49.7,64.8 -6.2,8.3 -12.1,16.9 -18.8,26.3 1.8,-11.2 3.5,-21.1 4.9,-31.1 0.5,-3.6 1.4,-7.5 0.4,-10.8 -3.4,-11.5 -0.4,-22.8 0.7,-34.2 0.3,-2.8 2.2,-6.2 4.5,-7.9 5.5,-4.2 11.5,-7.8 17.6,-11 3.4,-1.8 3.8,-3.4 2.9,-7 -2.9,-11.5 -5.2,-23.2 -8,-35.7 -2.2,1 -5.4,2.1 -8.2,3.8 -5.7,3.7 -10.9,8.3 -16.9,11.4 -17.3,9.2 -34.8,18 -52.4,26.6 -4.1,2 -8.7,3.5 -13.2,3.8 -7.2,0.6 -12.3,3.3 -15.7,9.7 -1,1.8 -2.8,3.3 -4.6,4.5 -9.7,6.8 -16.5,15.8 -20.3,27 -1.8,5.2 -4,10.3 -5.4,15.5 -4.6,16.5 -11.6,32.2 -13.6,49.4 -4.5,37 -9.5,73.9 -14.5,110.9 -1.7,12.7 -4.2,25.2 -6.4,37.8 157,0 314,0 470.9,0 6,-20 12,-40.1 18.2,-60.1 5.3,-17.4 9.5,-35 10.1,-53.2 0.4,-12.1 0.4,-24.3 0.8,-36.5 0.4,-11.5 1.6,-22.9 1.7,-34.4 0,-8 0.1,-16.6 -2,-24.4 z M 142.6,277.1 c -3.1,2.5 -4.5,5.3 -3.3,9.2 2.6,8.4 4.3,17.2 8.1,25.1 4.9,10.4 6.3,21.2 7,32.4 0.2,3.2 0.3,7.4 2.3,9.4 3.7,3.8 3.9,8.3 5,12.7 0.4,1.8 0.8,3.6 1.4,5.3 4.7,13.3 12.5,24.4 23.2,33.7 5.3,4.6 10.5,9.9 14.2,15.8 5.6,8.9 8.2,19.2 9.2,29.7 0.8,8.3 3.7,15.4 9.8,21.5 1,-0.5 1.6,-0.8 2.2,-1.1 27,-14.7 53.8,-29.7 81,-44.1 15.7,-8.3 30.1,-18.2 43.3,-30 2.1,-1.9 3.8,-4.3 5,-5.8 -2.3,-3 -5.5,-5.2 -5.4,-7.3 0.5,-10.1 2.2,-20.1 2.8,-30.1 0.4,-5.4 0.7,-9.9 7.5,-10.5 0.9,-0.1 1.7,-0.9 2.5,-1.5 8.6,-6.4 13.1,-15.6 17.1,-25.2 2.3,-5.6 3.9,-11.6 6.6,-17 3.5,-7 4.6,-14.5 3.3,-21.8 -0.9,-4.7 -3.7,-9.7 -7.2,-13 -2.3,-2.2 -7.3,-1.5 -10.4,-2 0,-18.4 0,-37.3 0,-56.6 0.1,0 0,0 0,0 -0.3,-3.3 -1.3,-6 -2.1,-7.8 -1.2,-2.6 -2.9,-2.9 -3.8,-5.7 -1.6,-4.5 -2.5,-9.6 -5.4,-13.2 -5.3,-6.8 -11.9,-12.7 -17.7,-19.2 -3.4,-3.8 -5.8,-8.5 -9.5,-11.8 -6.4,-5.5 -13.2,-10.6 -20.3,-15.1 -6.9,-4.4 -14.2,-8.7 -21.9,-11.3 -7,-2.4 -14.7,-2.2 -22.1,-3.6 -13.1,-2.5 -26.4,-3.9 -39.6,-2 -13.8,2 -27.3,5.5 -41.1,7.4 -6.6,0.9 -11,7.6 -18.1,6.4 -0.6,-0.2 -4,-1.3 -7,-0.4 1.4,0.5 2.2,1.2 2.6,1.7 -1.9,0.1 -4.2,0.6 -6.1,2.5 0.9,-0.3 2.6,-0.6 4.2,0.8 0,0 -6.4,1 -8.4,4.3 -2,3.3 -5.7,5.1 -5.7,5.1 0,0 -2.1,0.5 -3.5,3.9 0.1,0 3.4,-1.5 6.6,-0.9 -7,4 -7.1,6.8 -8,8.2 3.7,-3.5 8.3,-3.6 8.5,-3.1 0.2,0.5 -0.4,2.5 -0.5,2.6 -0.9,1.2 -1.9,2.2 -2.9,3.2 -3.5,3.6 -3.6,4.1 -1.3,7.5 4.7,-6 7.3,-6.9 7.3,-6.9 0,0 -6.2,11.4 -6.9,13.9 -0.7,2.5 0.8,4.8 1.3,4.4 0.2,-2 2.1,-2.8 2.9,-3 0.1,0 0.2,-0.1 0.3,-0.1 -1.1,9.8 -1.7,19 -3.2,28.1 -1.3,8.3 -3.8,16.3 -5.2,24.6 -0.5,2.8 1.2,5.9 1.4,8.9 0.6,12.6 1.1,25.2 1.5,37.9 0.4,1.4 -0.5,3.1 -1.5,3.9 z"
+
+					  />
+					  </path></g>
+				  </svg>
+				</div>
+			  </div>
+			</div>
+			<!--/END rooms__right-->
+		  </div>
+		  <!--/END values__inner-->
+		</div>
+		<!--/END values-->
+	  </div>
+	  <div class="page">
+		<div class="advantage">
+		  <div class="advantage__inner">
+
+			<div class="advantage__page-heading">
+			  <div class="advantage__page-heading-top">
+				<h1 class="advantage__heading">ПЕРЕВАГИ</h1>
+			  </div>
+			  <div class="advantage__page-heading-bot">
+				<h2 class="advantage__caption">ЧОМУ ВАРТО ЖИТИ ТУТ?</h2>
+			  </div>
+			</div>
+			<!--/END advantage__page-heading-->
+
+			<div class="advantage__list-wrap">
+			  <ul class="advantage__list">
+				<li class="advantage__item">
+				  <div class="advantage__img-wrap">
+					<img src="img/advantage/ex1.jpg" alt="/">
+					<p class="advantage__img-text">
+					  Вдале розташування – у історичному центрі міста, на перетині ключових
+					  транспортних артерій.
+					</p>
+				  </div>
+				</li>
+				<li class="advantage__item">
+				  <div class="advantage__img-wrap">
+					<img src="img/advantage/ex2.jpg" alt="/">
+					<p class="advantage__img-text">
+					  Поряд із будинком – мальовничий парк Шевченка, Ботанічний сад та ще чимало
+					  місць для прогулянок.
+					</p>
+				  </div>
+				</li>
+				<li class="advantage__item">
+				  <div class="advantage__img-wrap">
+					<img src="img/advantage/ex3.jpg" alt="/">
+					<p class="advantage__img-text">
+					  Будинок оточений пам’ятками архітектури, культурними закладами та іншими
+					  місцями сили.
+					</p>
+				  </div>
+				</li>
+				<li class="advantage__item">
+				  <div class="advantage__img-wrap">
+					<img src="img/advantage/ex4.jpg" alt="/">
+					<p class="advantage__img-text">
+					  Насичена міська інфраструктура – десятки кафе, ресторанів, магазинів та
+					  торгових центрів.
+					</p>
+				  </div>
+				</li>
+				<li class="advantage__item">
+				  <div class="advantage__img-wrap">
+					<img src="img/advantage/ex1.jpg" alt="/">
+					<p class="advantage__img-text">
+					  Нечисленна спільнота мешканців, що притаманно клубному будинку.
+					</p>
+				  </div>
+				</li>
+				<li class="advantage__item">
+				  <div class="advantage__img-wrap">
+					<img src="img/advantage/ex2.jpg" alt="/">
+					<p class="advantage__img-text">
+					  Продумана естетика та ергономіка суспільних просторів.
+					</p>
+				  </div>
+				</li>
+				<li class="advantage__item">
+				  <div class="advantage__img-wrap">
+					<img src="img/advantage/ex3.jpg" alt="/">
+					<p class="advantage__img-text">
+					  Супер-сучасна система безпеки, яка враховує повне збереження
+					  конфіденційності.
+					</p>
+				  </div>
+				</li>
+			  </ul>
+			</div>
+			<!--/END advantage__list-wrap-->
+
+
+		  </div>
+		  <!--/END advantage__inner-->
+		</div>
+		<!--/END advantage-->
+	  </div>
+	  <div class="page">
+		<div class="location">
+		  <div class="location__inner">
+			<div class="location__left">
+			  <div class="location__left-inner">
+
+				<div class="location__page-heading">
+				  <div class="location__page-heading-top">
+					<h1 class="location__heading">РОЗТАШУВАННЯ</h1>
+				  </div>
+				  <div class="location__page-heading-bot">
+					<h2 class="location__caption">НА ЗВ’ЯЗКУ ІЗ ЦЕНТРОМ</h2>
+				  </div>
+				</div>
+				<!--/END location__page-heading-->
+
+				<div class="location__description-wrap">
+				  <div class="location__description">
+					<p class="location__description-text">
+					  Місто – це не просто сукупність будинків, вулиць та кварталів. Насамперед це наші
+					  щоденні маршрути, з яких складається наше міське життя. Ось як може виглядати
+					  ваша звичайна прогулянка, якщо ви живете на Володимирській… RESIDENT Concept
+					  House – Парк Шевченка – Національна опера – Золоті ворота – Софійський собор –
+					  Андріївський узвіз. Жити у історичному центрі – це жити у оточені краси та величі і
+					  насолоджуватись ними щодня.</p>
+				  </div>
+				</div>
+				<!--/END location__description-wrap-->
+
+				<div class="location__list-wrap">
+				  <ul class="location__list">
+					<li class="location__item" data-location__item="1">
+	  <span class="location__item-text">
+	  <strong>хвилин пішки</strong> до ботанічного саду</span>
+					</li>
+					<li class="location__item" data-location__item="2">
+	  <span class="location__item-text">
+	  <strong>хвилин пішки</strong> до ботанічного саду
+	  </span>
+					<li class="location__item" data-location__item="3">
+	  <span class="location__item-text">
+	  <strong>хвилин пішки</strong> до ботанічного саду
+	  </span>
+					</li>
+					<li class="location__item" data-location__item="4">
+	  <span class="location__item-text">
+	  <strong>хвилин пішки</strong> до ботанічного саду
+	  </span>
+					</li>
+					<li class="location__item" data-location__item="5">
+	  <span class="location__item-text">
+	  <strong>хвилин пішки</strong> до ботанічного саду
+	  </span>
+					</li>
+					<li class="location__item" data-location__item="6">
+	  <span class="location__item-text">
+	  <strong>хвилин пішки</strong> до Володимирського собору
+	  </span>
+					</li>
+				  </ul>
+				</div>
+				<!--/END location__list-wrap-->
+
+			  </div>
+			</div>
+			<div class="location__right">
+			  <div id="map" class="location__map"></div>
+			</div>
+		  </div>
+		  <!--/END location__inner-->
+		</div>
+		<!--/END location-->
+	  </div>
+	  <div class="page">
+		<div class="apartments">
+		  <div class="apartments__inner">
+
+			<div class="page-top">
+			  <h1 class="page-top__heading page-top__heading--apartments">Обрати квартиру</h1>
+			</div>
+
+			<div class="page-nav">
+			  <ul class="page-nav__list">
+				<li class="page-nav__item" data-page-nav-item="1">
+				  <span class="page-nav__text">Обрати поверх</span>
+				</li>
+				<li class="page-nav__item" data-page-nav-item="2">
+				  <span class="page-nav__text">Підбір по параметрам</span>
+				</li>
+
+				<li class="page-nav__item">
+				  <div class="page-nav__item-inner">
+
+					<button class="paginate left"><i></i><i></i></button>
+					<div class="counter"></div>
+					<button class="paginate right"><i></i><i></i></button>
+
+				  </div>
+				</li>
+				<li class="page-nav__item">
+				  <span class="page-nav__num">10</span>
+				  <span class="page-nav__text">Квартир</span>
+				</li>
+				<li class="page-nav__item">
+				  <span class="page-nav__text">Параметри квартири</span>
+				</li>
+
+				<li class="page-nav__item" data-page-nav-item="6">
+				  <div class="windrose-wrap">
+					<div class="windrose__inner">
+					  <span>Пд</span>
+					  <span>Сх</span>
+					  <span>Зх</span>
+					  <span>Пн</span>
+					</div>
+				  </div>
+				</li>
+			  </ul>
+			</div>
+			<!--/ END page-nav-->
+
+			<div class="apartments__description">
+			  <div class="apartments__description-inner">
+
+				<div class="apartments__description-left">
+				  <div class="room-set">
+					<ul class="room-set__list">
+					  <li class="room-set__item">Придбана</li>
+					  <li class="room-set__item" data-cl="one">1 Кімната</li>
+					  <li class="room-set__item" data-cl="two">2 Кімнати</li>
+					  <li class="room-set__item" data-cl="three">3 Кімнати</li>
+					</ul>
+				  </div>
+				</div>
+
+				<div class="apartments__description-center">
+				  <div class="apartments__description-center-inner">
+
+					<div class="apartments__img-wrap">
+					  <div class="apartments__img">
+						<div class="apartments__img-inner">
+						  <a href="room.html">
+							<img src="img/plan.png" alt="dwe">
+						  </a>
+						</div>
+					  </div>
+					</div>
+
+				  </div>
+				  <!--/END apartments__description-center-inner-->
+				</div>
+				<!--/END apartments__description-center-->
+
+				<div class="apartments__description-right">
+				  <div class="param">
+
+					<ul class="param__list">
+
+					  <li class="param__item">
+						<span class="param__room-num">2Г</span>
+						<span class="param__room">Квартира</span>
+					  </li>
+					  <li class="param__item">
+						<span class="param__room-num">2</span>
+						<span class="param__room">К-сть кімнат</span>
+					  </li>
+					  <li class="param__item">
+						<p class="param__num">55,37<sub>м<sup>2</sup></sub></p>
+						<p class="param__text">Загальна площа</p>
+					  </li>
+					  <li class="param__item">
+						<span class="param__num">40,20<sub>м<sup>2</sup></sub></span>
+						<span class="param__text">Житлова площа</span>
+					  </li>
+
+					</ul>
+
+				  </div>
+				</div>
+			  </div>
+			</div>
+
+		  </div>
+		</div>
+		<!--/END apartments-->
+	  </div>
+	  <!--/END page content code-->
+
+	</div>
+	<!--/END content__inner-->
+  </main>
+  <!--/END content-->
+
+  <footer class="footer">
+	<div class="footer__inner">
+	  <div class="footer__left">
+		<p class="footer__text"> &#169; 2017 Philadelphia усі права захищено.</p>
+	  </div>
+	  <div class="footer__right">
+		<div class="smart">
+		  <div class="smart__logo-wrap">
+			<div class="smart__text">Розробка сайту</div>
+			<a href="#" class="smart__link">smart-link</a>
+		  </div>
+		</div>
+		<!--/END smart-->
+	  </div>
+	</div>
+  </footer>
+  <!--/END footer-->
+</div>
+<!--/END all_wrapper-->
+
+<!---->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCb1nF3LPA_ZOACIAdwgtrh0nrQd4NYybA&sensor=false"></script>
+<!--<script async src="js/scripts.min.js"></script>-->
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/slick/slick.min.js"></script>
+<script src="libs/anime/anime.min.js"></script>
+<script src="libs/magnific-popup/jquery.magnific-popup.js"></script>
+<!---->
+<script src="libs/modernizr-custom.js"></script>
+<script src="libs/classie.js"></script>
+<script src="libs/main.js"></script>
+<!---->
+<script src="libs/scrollpane/mousewheel.min.js"></script>
+<script src="libs/scrollpane/jscrollpane.min.js"></script>
+<!---->
+
+<script src="js/common.js"></script>
+
+<script>
+
+	$(document).ready(function () {
+		$('.param__list').slick({
+			infinite: true,
+			vertical: true,
+			slidesToShow: 5,
+			slidesToScroll: 1,
+			verticalSwiping: true
+		})
+	})
+</script>
+<script id="main-form-tamplate" type="text/template">
+  <div class="main-form">
+	<form id="main__form">
+	  <h2 class="main-form__title">Замовити дзвінок</h2>
+	  <label class="form-required"><input name="name" class="form__field" required="" type="text" placeholder="Ім’я:"
+										  class="vissible"></label>
+	  <label class="form-required"><input class="form__field inputtelmask" name="tel" required="" type="tel"
+										  placeholder="Телефон:"></label>
+	  <label><input class="form__field inputemeilmask" required="" name="email" type="email"
+					placeholder="E-mail:"></label>
+	  <input class="submit vissible" type="submit" value="Надіслати">
+	</form>
+  </div>
+</script>
+
+</body>
+</html>

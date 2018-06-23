@@ -1,0 +1,336 @@
+@import "vars"
+
+.news-page
+  width: 100%
+  min-height: 100vh
+  background-color: #f4ede7
+  padding-top: 40px
+  padding-bottom: 40px
+  display: flex
+  flex-direction: column
+  &__inner
+    flex: 1
+    +inner
+    height: 100%
+  &__page-heading
+    width: 100%
+    position: relative
+    z-index: 1
+    padding: 40px 0
+    &::before
+      content: ''
+      width: 186px
+      height: 186px
+      border: 1px solid $border-color
+      border-radius: 50%
+      position: absolute
+      z-index: -1
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+    &::after
+      content: ''
+      width: 167px
+      height: 167px
+      border: 1px solid $border-color
+      border-radius: 50%
+      position: absolute
+      z-index: -1
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+  &__page-heading-top
+    position: relative
+    z-index: 2
+    text-align: center
+    opacity: 0
+  &__heading
+    text-transform: uppercase
+    +fonts($EG_Bold, $main-color, 30, 110, 25)
+
+  &__back-btn-wrap
+    position: absolute
+    top: 55%
+    left: 0
+    transform: translate(0, -50%)
+    width: 100px
+    padding-left: 55px
+    height: 30px
+    &::before
+      content: ''
+      width: 55px
+      height: 13px
+      position: absolute
+      top: 10px
+      left: 0
+      background: url("../img/news-page/arrow-back.png") no-repeat center center
+
+  &__back-btn
+    +fonts($R_Reg, #596472, 12, 16, 25)
+    text-decoration: none
+
+  &__content
+    +bWidth(900, 1180)
+    height: 400px
+    margin: 15px auto 0
+    display: flex
+    justify-content: flex-start
+    align-items: stretch
+  &__left,
+  &__right
+    width: 50%
+    height: 100%
+    opacity: 0
+
+  &__right-inner
+    padding: 0 0 0 20px
+  //===============================
+  &__left-inner
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+    align-items: center
+  &__top-slider
+    width: 100%
+    height: 280px
+  &__top-slide
+    width: 100%
+    height: 100%
+    img
+      +img-respons
+      height: 100%
+
+  &__bot-slider
+    width: 80%
+    margin: 0 auto
+    height: 100px
+  &__bot-slide
+    width: 95%
+    margin: 0 auto
+    height: 100%
+    img
+      +img-respons
+
+  &__bot-slider
+    .slick-prev
+      top: 15px
+      left: -40px
+      width: 30px
+      height: 30px
+      &::before
+        content: ''
+        height: 15px
+        width: 8px
+        background: url("../img/news-page/arrow-left.png") no-repeat center top / cover
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+    .slick-next
+      width: 30px
+      height: 30px
+      top: 15px
+      right: -40px
+      &::before
+        content: ''
+        height: 15px
+        width: 8px
+        background: url("../img/news-page/arrow-right.png") no-repeat center top / cover
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+  //===============================
+  &__data-time-wrap
+    width: 100%
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+  &__data,
+  &__time
+    width: 85px
+    padding-left: 10px
+    position: relative
+  &__data::before
+    content: ''
+    position: absolute
+    top: 55%
+    left: 0
+    width: 5px
+    height: 5px
+    background: url("../img/news-page/calendar_icon.png") no-repeat center top
+  &__time::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 0
+    width: 7px
+    height: 7px
+    background: url("../img/news-page/clock_icon.png") no-repeat center top
+  &__data-text,
+  &__time-text
+    +fonts($EG_Bold, $main-color, 10, 10, 25)
+  //===============================
+  &__description-wrap
+    width: 430px
+    padding-right: 20px
+    height: 370px
+    overflow: auto
+    outline: none
+  //===============================
+  &__img-wrap
+    width: 100%
+    img
+      +img-respons
+
+.section_text
+  width: 100%
+  margin-bottom: 30px
+  +fonts($R_Reg, #596472, 12, 24, 25)
+  text-align: justify
+//===============================
+.anim
+  .news-page__page-heading-top
+    opacity: 1
+    transition: opacity 1s linear .5s
+  .news-page__left
+    opacity: 1
+    transition: opacity 1s linear .7s
+  .news-page__right
+    opacity: 1
+    transition: opacity 1s linear 1s
+//===============================
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px)
+  /**/
+  .news-page__description-wrap
+    width: 380px
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 992px)
+  /**/
+  .news-page__content
+    padding: 0 10px
+  .news-page__right-inner
+    padding: 0 0 0 10px
+  .section_text
+    margin-bottom: 15px
+  .news-page__top-slider
+    height: 50%
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px)
+  /**/
+  .news-page
+    padding-top: 50px
+  .news-page__page-heading
+    padding: 0
+  .news-page__page-heading::before,
+  .news-page__page-heading::after
+    display: none
+
+  .news-page__heading
+    +fonts($EG_Bold, $main-color, 30, 52, 25)
+  .news-page__back-btn-wrap
+    display: none
+
+  .news-page__content
+    flex-wrap: wrap
+    height: 100%
+    padding: 0 30px
+
+  .news-page__left, .news-page__right
+    width: 100%
+  .news-page__left
+    margin-bottom: 10px
+    height: 280px
+
+  .news-page__description-wrap
+    height: 280px
+
+  .news-page__left-inner
+    height: 100%
+    position: relative
+  .news-page__top-slider
+    height: 100%
+    overflow: hidden
+
+  .news-page__bot-slider
+    position: absolute
+    top: 20px
+    left: 100%
+    width: 90px
+    height: 80%
+
+  .news-page__bot-slider .slick-prev
+    top: -36px
+    left: 0
+    right: 0
+    margin: 0 auto
+    z-index: 100
+    width: 40px
+    height: 25px
+    &::before
+      transform: rotate(90deg)
+      right: 0
+      left: 0
+      margin: 0 auto
+      top: auto
+      bottom: 5px
+
+  .news-page__bot-slider .slick-next
+    bottom: 25px
+    top: auto
+    left: 0
+    right: 0
+    margin: 0 auto
+    width: 40px
+    height: 25px
+    z-index: 100
+    &::before
+      transform: rotate(90deg)
+      right: 0
+      left: 0
+      margin: 0 auto
+      top: 10px
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 600px)
+  /**/
+  .news-page__content
+    width: 90%
+    align-items: flex-start
+    margin: 0 auto
+    padding: 0
+  .news-page__description-wrap
+    height: 250px
+
+  .news-page__top-slider
+    width: calc(100% - 90px)
+    height: 280px
+  .news-page__top-slide
+    width: auto
+    height: 280px
+    img
+      height: 100%
+      width: auto
+  .news-page__bot-slider
+    position: relative
+    top: 10px
+    left: auto
+    right: 0
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 480px)
+  /**/
+  .news-page__heading
+    +fonts($EG_Bold, $main-color, 18, 44, 25)
+
+  .news-page__content
+    width: 100%
+
+  .news-page__description-wrap
+    height: 240px

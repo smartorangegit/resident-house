@@ -1,0 +1,331 @@
+@import "vars"
+
+//===============================
+.floor-page
+  width: 100%
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  &__inner
+    display: flex
+    flex: 1
+    width: 100%
+    height: 100%
+    justify-content: space-around
+    align-items: stretch
+    position: relative
+  &__left,
+  &__right
+    width: 50%
+    min-height: 100vh
+  //====================================
+  &__left-inner
+    width: 100%
+    min-height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+  //====================================
+  &__left-arrow
+    position: absolute
+    top: 50%
+    right: -10px
+    width: 200px
+    height: 45px
+    background-color: #b8967b
+    padding-left: 30px
+    transition: all .7s ease-in-out
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 100%
+      transform: translate(0, -50%)
+      width: 20px
+      height: 54px
+      border: 30px solid transparent
+      border-left: 10px solid #7c624b
+  &__left-arrow-num
+    +fonts($EG_Bold, #f4ede7, 36, 24, 25)
+    position: relative
+    top: 5px
+  &__left-arrow-text
+    +fonts($R_Reg, #f4ede7, 12, 45, 25)
+    margin-left: 15px
+  //====================================
+  &__img-svg-wrap
+    width: 100%
+    height: 100%
+    text-align: center
+    overflow: hidden
+
+    svg
+      width: 100%
+      height: auto
+      display: inline-block
+
+      .svg_polygon
+        opacity: 0
+        transition: all .7s ease-in-out
+        &:hover
+          transition: all .7s ease-in-out
+          opacity: 1
+
+  .polygon-text
+    opacity: 0 !important
+    visibility: hidden !important
+  .visible
+    opacity: 1 !important
+  //====================================
+  &__page-heading
+    width: 100%
+    position: absolute
+    z-index: 99
+    top: 100px
+    left: 50%
+    transform: translate(-50%, 0)
+  &__page-heading-top
+    text-align: center
+  &__heading
+    +fonts($ZI, $main-color, 60, 70, 25)
+  //====================================
+  &__right-inner
+    width: 100%
+    min-height: 100%
+    padding-top: 180px
+    padding-bottom: 40px
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+  //====================================
+  &__right-cont-top
+    width: 100%
+    margin-bottom: 10px
+  &__nav-list
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    padding: 10px
+  &__nav-item
+    position: relative
+    height: 40px
+  [data-nav-item="f-p-1"]
+    width: 45%
+    text-align: center
+    .floor-page__left-arrow-num
+      color: $main-color
+      top: 7px
+    .floor-page__nav-text
+      position: relative
+      top: 2px
+  [data-nav-item="f-p-2"]
+    width: 45%
+  [data-nav-item="f-p-3"]
+    width: 5%
+    .windrose
+      bottom: 100%
+      top: auto
+      right: 0
+  &__nav-item-inner
+    width: 100%
+    text-align: center
+  &__nav-num
+    +fonts($EG_Bold, $main-color, 36, 30, 25)
+    position: relative
+    top: 5px
+  &__nav-text
+    +fonts($R_Reg, #000, 12, 30, 25)
+  //====================================
+  &__right-cont-cent
+    width: 100%
+    margin-bottom: 30px
+  &__img-wrap
+    width: 100%
+    height: 400px
+    padding: 8px 0
+    position: relative
+    z-index: 5
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 286px
+      height: 286px
+      border: 1px solid $border-color
+      border-radius: 50%
+    &::after
+      content: ''
+      width: 266px
+      height: 266px
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      border: 1px solid $border-color
+      border-radius: 50%
+  &__img
+    +bWidth(450, 600)
+    height: 100%
+    margin: 0 auto
+    position: relative
+    text-align: center
+    z-index: 10
+    img
+      width: auto
+      height: 100%
+      display: inline-block
+
+  //====================================
+  &__right-cont-bot
+    width: 50%
+    padding: 1px 0
+    position: absolute
+    bottom: 70px
+//===============================
+.floor-room-set
+  width: 100%
+  &__list
+    width: 70%
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__item
+    width: 100px
+  &__text
+    width: 100%
+    height: 40px
+    padding: 10px 0 10px 15px
+    text-align: center
+    position: relative
+    +fonts($R_Reg, #596472, 12, 24, 25)
+    &::before
+      content: ''
+      width: 12px
+      height: 12px
+      background-color: #fff
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translate(0, -50%)
+
+  [data-floor-set-text="1"]
+    &::before
+      background-color: #c1dc70
+  [data-floor-set-text="2"]
+    &::before
+      background-color: #70bfdc
+  [data-floor-set-text="3"]
+    &::before
+      background-color: #9e8aac
+  [data-floor-set-text="4"]
+    &::before
+      background-color: #776843
+
+//====================================
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px)
+  /**/
+  .floor-page__img-svg-wrap
+    svg
+      width: auto
+      height: 700px
+  //====================================
+  .floor-page__left-arrow
+    width: 100px
+    padding-left: 0
+  .floor-page__left-arrow-num
+    +fonts($EG_Bold, #f4ede7, 30, 24, 25)
+    top: 3px
+  .floor-page__left-arrow-text
+    margin-left: 5px
+  //====================================
+  .floor-room-set__list
+    width: 98%
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1100px)
+  /**/
+  .floor-page__left-arrow
+    display: none
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px)
+  /**/
+  .floor-page__left-inner
+    flex-direction: column
+    justify-content: flex-end
+  .floor-page__img-svg-wrap
+    flex: 1
+    display: flex
+    height: 100%
+    align-self: flex-end
+    position: relative
+    svg
+      min-width: 95%
+      min-height: 100%
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-40%, -50%)
+  //===============================
+  .floor-page__page-heading
+    top: 65px
+  //===============================
+  .floor-page__right-cont-cent
+    margin-bottom: 15px
+  //===============================
+  .floor-room-set__item
+    width: 80px
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 768px)
+  /**/
+  .floor-page__img-svg-wrap
+    height: 600px
+    svg
+      top: 55%
+      min-width: 90%
+
+  //===============================
+  .floor-page__right-inner
+    padding-bottom: 10px
+  //===============================
+  .floor-page__heading
+    +fonts($ZI, $main-color, 48, 70, 25)
+  //===============================
+  .floor-room-set__list
+    flex-wrap: wrap
+  .floor-room-set__item
+    width: 50%
+    text-align: center
+/* Small Devices, Tablets */
+@media only screen and (max-width: 700px)
+  /**/
+  .floor-page__img-svg-wrap svg
+    top: 60%
+    min-width: 100%
+    transform: translate(-50%, -50%)
+
+  //===============================
+  .floor-page__page-heading
+    top: 60px
+  .floor-page__heading
+    +fonts($ZI, $main-color, 36, 70, 25)
+  //===============================
+  .floor-page__left
+    width: 100%
+  //===============================
+  .floor-page__right
+    display: none
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 500px)
+  /**/
+  .floor-page__img-svg-wrap svg
+    //top: 50%
+    //min-width: 100%
+    transform: translate(-40%, -50%)

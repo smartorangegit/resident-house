@@ -1,0 +1,268 @@
+@import "vars"
+
+.advantage
+  width: 100%
+  min-height: 100vh
+  padding-top: 80px
+  padding-bottom: 30px
+  background-color: #f4ede7
+  display: flex
+  flex-direction: column
+  &__inner
+    +bWidth(900, 1180)
+    height: 100%
+    flex: 1
+    display: flex
+    flex-direction: column
+
+    margin: 0 auto
+  &__page-heading
+    width: 100%
+    position: relative
+    z-index: 1
+    padding: 0
+    &::before
+      content: ''
+      width: 186px
+      height: 186px
+      border: 1px solid $border-color
+      border-radius: 50%
+      position: absolute
+      z-index: -1
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+    &::after
+      content: ''
+      width: 166px
+      height: 166px
+      border: 1px solid $border-color
+      border-radius: 50%
+      position: absolute
+      z-index: -1
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+  &__page-heading-top
+    text-align: center
+    position: relative
+    z-index: 2
+    opacity: 0
+  &__heading
+    +fonts($ZI, $main-color, 72, 100, 25)
+
+  &__page-heading-bot
+    width: 580px
+    margin: 0 auto
+    text-align: center
+    position: relative
+    z-index: 2
+    opacity: 0
+    &::before
+      content: ''
+      position: absolute
+      z-index: 2
+      top: 60%
+      left: 0
+      height: 1px
+      background-color: $orange-color
+      +bWidth(80, 600)
+    &::after
+      content: ''
+      position: absolute
+      z-index: 2
+      top: 60%
+      right: 0
+      height: 1px
+      background-color: $orange-color
+      +bWidth(80, 600)
+  &__caption
+    +fonts($EG_Bold, $main-color, 30, 40, 25)
+  //===============================
+  &__list-wrap
+    width: 100%
+    margin-top: 45px
+    position: relative
+
+    &::before
+      content: ''
+      position: absolute
+      pointer-events: none
+      z-index: 10
+      top: 0
+      left: -1px
+      height: 100%
+      width: 100px
+      background-image: linear-gradient(90deg, #f4ede7 50%, rgba(255, 255, 255, 0))
+    &::after
+      content: ''
+      position: absolute
+      pointer-events: none
+      z-index: 10
+      top: 0
+      right: -1px
+      height: 100%
+      width: 100px
+      background-image: linear-gradient(-90deg, #f4ede7 50%, rgba(255, 255, 255, 0))
+
+    .slick-prev
+      width: 100px
+      height: 36px
+      top: -40px
+      +fonts($EG_Bold, $main-color, 16, 36, 125)
+      color: transparent
+      &::before
+        content: 'назад'
+        +fonts($EG_Bold, $main-color, 16, 36, 125)
+        width: 50px
+        height: 36px
+        position: absolute
+        top: -3px
+        left: 25px
+      &::after
+        content: ''
+        text-transform: uppercase
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translate(0, -50%)
+        width: 20px
+        height: 36px
+        background: url("../img/arrow-icon/arrow-left.png") no-repeat center top / cover
+
+    .slick-next
+      width: 100px
+      height: 36px
+      top: -40px
+      +fonts($EG_Bold, $main-color, 16, 36, 125)
+      color: transparent
+      &::before
+        content: 'вперед'
+        +fonts($EG_Bold, $main-color, 16, 36, 125)
+        width: 75px
+        height: 36px
+        position: absolute
+        top: -3px
+        right: 20px
+      &::after
+        content: ''
+        text-transform: uppercase
+        position: absolute
+        top: 50%
+        right: 0
+        transform: translate(0, -50%)
+        width: 20px
+        height: 36px
+        background: url("../img/arrow-icon/arrow-right.png") no-repeat center top / cover
+  &__list
+    width: 100%
+    opacity: 0
+  &__item
+    cursor: pointer
+    outline: none
+  &__img-wrap
+    width: 80%
+    margin: 0 auto
+    img
+      +img-respons
+  &__img-text
+    +fonts($R_Reg, #596472, 12, 24, 25)
+    text-align: left
+    margin-top: 20px
+//===============================
+.anim
+  .advantage__page-heading-top
+    opacity: 1
+    transition: opacity 1s linear .5s
+  .advantage__page-heading-bot
+    opacity: 1
+    transition: opacity 1s linear .7s
+  .advantage__list
+    opacity: 1
+    transition: opacity 1s linear 1s
+
+//===============================
+/*==========  Desktop First  ==========*/
+/* Small Devices, Tablets */
+@media only screen and (max-width: 992px)
+  /**/
+  .advantage__page-heading
+    padding: 0 0 10px
+  .advantage__list-wrap
+    width: 90%
+    margin: 45px auto
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px)
+  /**/
+  .advantage__heading
+    +fonts($ZI, $main-color, 48, 70, 25)
+  .advantage__list-wrap
+    margin: 45px auto 10px
+  .advantage__page-heading-bot
+    width: 100%
+/* Small Devices, Tablets */
+@media only screen and (max-width: 700px)
+  /**/
+  .advantage__inner
+    padding-top: 50px
+  .advantage__page-heading-bot::before,
+  .advantage__page-heading-bot::after
+    display: none
+  .advantage__img-text
+    margin-top: 10px
+  .advantage__heading
+    line-height: 1.2
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 650px)
+  /**/
+  .advantage__inner
+    width: 85%
+  .advantage
+    display: block
+  .advantage__img-wrap
+    width: 65%
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 600px)
+  /**/
+  .advantage
+    padding-top: 50px
+    padding-bottom: 5px
+  .advantage__inner
+    padding-top: 0
+  .advantage__list-wrap::before,
+  .advantage__list-wrap::after
+    display: none
+  .advantage__page-heading
+    padding: 0
+  .advantage__page-heading::before,
+  .advantage__page-heading::after
+    display: none
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 480px)
+  /**/
+  .advantage__inner
+    width: 100%
+  .advantage__heading
+    +fonts($ZI, $main-color, 36, 26, 25)
+  .advantage__page-heading::before,
+  .advantage__page-heading::after
+    display: none
+  .advantage__caption
+    +fonts($EG_Bold, $main-color, 24, 30, 25)
+
+  .advantage__img-wrap
+    width: 75%
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 380px)
+  /**/
+  .advantage__inner
+    width: 100%
+    padding-bottom: 30px
+  .advantage__img-wrap
+    width: 90%
+  .advantage__img-text
+    margin-top: 5px

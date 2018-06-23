@@ -1,0 +1,273 @@
+@import vars
+
+
+.menu-nav
+  width: 100%
+  padding: 20px
+  min-height: 100%
+  background-color: #d6bba7
+
+  &__inner
+    width: 100%
+    border: 1px solid #ebe1d9
+    overflow: hidden
+    overflow-y: auto
+
+  &__top-wrap,
+  &__center-wrap
+    +inner
+  &__top-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    padding-top: 20px
+    padding-bottom: 20px
+
+  &__center-wrap
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    padding: 25px 15px
+
+  &__center-item
+    width: 25%
+    min-width: 200px
+    margin-bottom: 15px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &:last-child
+      min-width: 240px
+
+  &__heading
+    +fonts($EG_Bold, $main-color, 24, 30, 50)
+    text-transform: uppercase
+    width: 100%
+    margin-bottom: 10px
+  &__link
+    +fonts($R_Reg, $main-color, 16, 36, 25)
+    text-decoration: none
+    padding-left: 25px
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 10px
+      left: 0
+      transform: translate(0, -50%)
+      width: 3px
+      height: 3px
+      background-color: #000
+  &__main-page-link
+    color: $main-color
+    text-decoration: none
+//=================================
+.menu-logo
+  width: 220px
+  &__inner
+    width: 100%
+  &__link
+    display: block
+    width: 100%
+    margin: 0
+    img
+      +img-respons
+//=================================
+.menu-text-wrap
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  .menu-text
+    +fonts($ZI, $main-color, 48, 72, 25)
+    text-transform: uppercase
+//=================================
+.callback
+  margin: 0 0 0 auto
+  &__inner
+    padding: 3px
+    background-color: $orange-color
+  &__link
+    +fonts($EG_Bold, #000, 12, 42, 100)
+    text
+    display: block
+    border: 1px solid #ebe1d9
+
+    padding: 0 30px 0 60px
+    text-transform: uppercase
+    text-decoration: none
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 30px
+      transform: translate(0, -50%)
+      width: 14px
+      height: 15px
+      background: url("../img/main_page/top-menu/phone_icon.png") no-repeat center
+//=================================
+.btn-close-wrap
+  width: 60px
+  .btn-close
+    margin: 0 0 0 auto
+    background: url("../img/main_page/top-menu/x_icon.png") no-repeat center
+    width: 50px
+    height: 36px
+    display: block
+    border: none
+    outline: none
+//=================================
+.about
+  width: 100%
+  &__list
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-self: center
+  &__item
+    width: 100%
+//=================================
+.apartment
+  width: 100%
+  &__list
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-self: flex-start
+  &__item
+    width: 100%
+//=================================
+.for-sale
+  width: 100%
+  &__list
+    width: 100%
+  &__item
+    padding-left: 30px
+    position: relative
+  &__link
+    +fonts($R_Reg, $main-color, 16, 36, 25)
+    text-decoration: none
+//=================================
+.project
+  width: 100%
+  &__list
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-self: flex-start
+  &__item
+    width: 100%
+//=============================
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px)
+  /**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px)
+  /**/
+  //=============================
+  .menu-nav__top-wrap
+    flex-wrap: wrap
+  .callback
+    order: 3
+    width: 100%
+  .callback__inner
+    width: 320px
+    margin: 0 auto
+
+
+  .menu-text-wrap
+    top: 40%
+  //=============================
+  .menu-nav__center-wrap
+    flex-wrap: wrap
+
+  .menu-nav__center-item
+    width: 25%
+    min-width: 240px
+  .menu-nav__center-item:last-child
+    width: 100%
+    flex-direction: row
+  //=============================
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px)
+  /**/
+  .menu-nav
+    padding: 0
+    &__top-wrap,
+    &__center-wrap
+      padding: 0 10px
+  .menu-nav__center-item
+    width: 50%
+  .menu-nav__center-item:last-child
+    width: 50%
+    flex-direction: column
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 700px)
+  /**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 600px)
+  /**/
+  //=============================
+  .menu-logo
+    width: 100%
+  .menu-logo__inner
+    width: 300px
+    margin: 0 auto
+    position: relative
+    overflow: hidden
+    height: 80px
+  .menu-logo__link
+    img
+      position: absolute
+      top: 50%
+      left: 50%
+      min-width: 100%
+      min-height: 100%
+      transform: translate(-50%,-50%)
+  .menu-text-wrap
+    display: none
+  //=============================
+  .btn-close-wrap
+    position: absolute
+    right: 10px
+    top: 10px
+  //=============================
+  .menu-nav__center-item
+    width: 100%
+  .menu-nav__center-item:last-child
+    width: 100%
+  //=============================
+  .about__item
+    width: 50%
+  //=============================
+  .apartment__item
+    width: 50%
+  //=============================
+  .project
+    width: 100%
+  .project__list
+    flex-wrap: wrap
+    width: 100%
+  .project__item
+    width: 50%
+
+  //=============================
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px)
+  /**/
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 380px)
+  /**/
+  .callback__inner
+    width: 100%

@@ -1,0 +1,257 @@
+@import "vars"
+
+.house
+  width: 100%
+  background-color: #f4ede7
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+
+  &__inner
+    padding-top: 95px
+    width: 100%
+    height: 100%
+    flex: 1
+    display: flex
+    justify-content: flex-start
+    align-items: stretch
+
+  &__left,
+  &__right
+    width: 50%
+
+  &__left-inner
+    width: 100%
+    max-width: 600px
+    margin: 0 0 0 auto
+
+  &__right
+    padding: 0 50px 60px 100px
+  &__right-inner
+    width: 100%
+    height: 100%
+    min-height: 540px
+    background: url("../img/house/right_bg.jpg") no-repeat center top / cover
+
+  &__page-heading
+    width: 100%
+    position: relative
+    z-index: 1
+    padding: 40px 0
+    &::before
+      content: ''
+      width: 340px
+      height: 340px
+      border: 1px solid $border-color
+      border-radius: 50%
+      position: absolute
+      z-index: -1
+      top: 75px
+      left: 50%
+      transform: translate(-50%, 0)
+    &::after
+      content: ''
+      width: 324px
+      height: 324px
+      border: 1px solid $border-color
+      border-radius: 50%
+      position: absolute
+      z-index: -1
+      top: 83px
+      left: 50%
+      transform: translate(-50%, 0)
+
+  &__page-heading-top
+    position: relative
+    z-index: 2
+    text-align: center
+    opacity: 0
+  &__heading
+    +fonts($ZI, $main-color, 90, 130, 25)
+  &__page-heading-bot
+    text-align: center
+    position: relative
+    z-index: 1
+    opacity: 0
+    &::before
+      content: ''
+      position: absolute
+      z-index: 2
+      top: 60%
+      left: 0
+      height: 1px
+      background-color: $orange-color
+      +bWidth(80, 600)
+    &::after
+      content: ''
+      position: absolute
+      z-index: 2
+      top: 60%
+      right: 0
+      height: 1px
+      background-color: $orange-color
+      +bWidth(80, 600)
+  &__caption
+    +fonts($EG_Bold, $main-color, 30, 40, 25)
+
+  &__description-wrap
+    position: relative
+    z-index: 5
+    width: 100%
+    max-width: 600px
+    margin: 0 auto
+    padding: 0 20px
+    opacity: 0
+  &__description
+    width: 100%
+    //height: 230px
+    //overflow-y: auto
+    padding: 0 20px 40px 15px
+  &__description-text
+    +fonts($R_Reg, #596472, 12, 24, 25)
+    text-align: justify
+    margin-bottom: 30px
+
+.anim
+  .house__page-heading-top
+    opacity: 1
+    transition: opacity 1s linear .5s
+  .house__page-heading-bot
+    opacity: 1
+    transition: opacity 1s linear .7s
+  .house__description-wrap
+    opacity: 1
+    transition: opacity 1s linear 1s
+//===============================
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 992px)
+  /**/
+  .house
+    height: 100%
+    &__right
+      padding: 0 25px 40px 10px
+    &__heading
+      +fonts($ZI, $main-color, 76, 72, 25)
+    &__inner
+      padding-left: 10px
+      padding-right: 10px
+    &__left-inner
+      width: 100%
+      height: 100%
+      max-width: 600px
+      margin: 0 0 0 auto
+      display: flex
+      flex-wrap: wrap
+
+  .house__page-heading::before,
+  .house__page-heading::after
+    display: none
+  .house__description-wrap
+    align-self: flex-end
+    width: 90%
+    padding: 0 0 0
+    margin: 0 auto 60px
+
+  .house__description-wrap::before
+    content: ''
+    width: 300px
+    height: 300px
+    border: 1px solid $border-color
+    border-radius: 50%
+    position: absolute
+    z-index: -1
+    bottom: 0
+    left: 50%
+    transform: translate(-50%, 0)
+  .house__description-wrap::after
+    content: ''
+    width: 286px
+    height: 286px
+    border: 1px solid $border-color
+    border-radius: 50%
+    position: absolute
+    z-index: -1
+    bottom: 7px
+    left: 50%
+    transform: translate(-50%, 0)
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px)
+  /**/
+  .house__inner
+    padding-top: 70px
+
+  .house__description
+    
+    margin: 0 auto
+
+  .house__heading
+    +fonts($ZI, $main-color, 60, 72, 25)
+  .house__caption
+    +fonts($EG_Bold, $main-color, 24, 40, 25)
+/* Small Devices, Tablets */
+@media only screen and (max-width: 600px)
+  /**/
+  .house__inner
+    flex-wrap: wrap
+    padding-top: 55px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      pointer-events: none
+      z-index: 1
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 100px
+      background: linear-gradient(0deg, #f4ede7, transparent)
+
+  .house__left,
+  .house__right
+    width: 100%
+
+  .house__right
+    padding: 0 5px 40px 5px
+
+  .house__page-heading
+    padding: 0
+  .house__page-heading-top
+    text-align: center
+  .house__page-heading-bot::before,
+  .house__page-heading-bot::after
+    display: block
+
+  .house__description-wrap
+    width: 100%
+    padding: 10px 0
+    margin: 0
+  .house__description-wrap::before
+    width: 200px
+    height: 200px
+  .house__description-wrap::after
+    width: 186px
+    height: 186px
+  .house__description
+    
+  .house__description-text
+    margin-bottom: 10px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px)
+  /**/
+  .house__page-heading
+    z-index: 3
+  .house__description-wrap
+    z-index: 1
+  .house__description-wrap::before
+    top: auto
+    bottom: 0
+  .house__description-wrap::after
+    top: auto
+    bottom: 8px
+  .house__description
+   /*  height: 150px
+    width: 300px */
+

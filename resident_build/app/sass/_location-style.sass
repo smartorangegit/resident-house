@@ -1,0 +1,372 @@
+@import "vars"
+
+.location
+  width: 100%
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  &__inner
+    width: 100%
+    height: 100%
+    flex: 1
+    display: flex
+    justify-content: flex-start
+    align-self: center
+
+  &__left
+    width: 50%
+    background-color: $bg-color
+    padding-top: 100px
+  &__left-inner
+    width: 100%
+    max-width: 600px
+    padding-left: 10px
+    padding-right: 10px
+    margin: 0 0 0 auto
+  &__right
+    width: 50%
+    background-color: $bg-color
+    position: relative
+
+  &__map
+    position: absolute
+    width: 100%
+    height: 100%
+
+  &__page-heading
+    width: 100%
+    position: relative
+    z-index: 1
+    padding: 40px 0 10px
+    &::before
+      content: ''
+      width: 340px
+      height: 340px
+      border: 1px solid $border-color
+      border-radius: 50%
+      position: absolute
+      z-index: -1
+      top: 60px
+      left: 50%
+      transform: translate(-50%, 0)
+    &::after
+      content: ''
+      width: 324px
+      height: 324px
+      border: 1px solid $border-color
+      border-radius: 50%
+      position: absolute
+      z-index: -1
+      top: 68px
+      left: 50%
+      transform: translate(-50%, 0)
+
+  &__page-heading-top
+    text-align: center
+    position: relative
+    z-index: 2
+    opacity: 0
+  &__heading
+    +fonts($ZI, $main-color, 60, 84, 25)
+  &__page-heading-bot
+    text-align: center
+    position: relative
+    z-index: 1
+    opacity: 0
+    &::before
+      content: ''
+      position: absolute
+      z-index: 2
+      top: 60%
+      left: 0
+      height: 1px
+      background-color: $orange-color
+      +bWidth(80, 600)
+    &::after
+      content: ''
+      position: absolute
+      z-index: 2
+      top: 60%
+      right: 0
+      height: 1px
+      background-color: $orange-color
+      +bWidth(80, 600)
+  &__caption
+    +fonts($EG_Bold, $main-color, 30, 40, 25)
+  &__pan-btn
+      display: block
+      text-decoration: none
+      text-align: center
+      font-family: EngraversGothicBold,sans-serif
+      color: #fff
+      font-size: .875em
+      line-height: 1.14286
+      letter-spacing: .1em
+      text-transform: uppercase
+      -webkit-box-sizing: border-box
+      box-sizing: border-box
+      padding: 14px 0
+      background-color: #f0ae76
+      border-left: 3px solid #2b2e34
+      -webkit-transition: all 1s
+      transition: all 1s
+  &__pan-wrap
+    margin-bottom: 25px
+
+  &__description-wrap
+    position: relative
+    z-index: 5
+    width: 100%
+    max-width: 500px
+    margin: 0 auto
+    padding: 0
+    opacity: 0
+  &__description
+    width: 100%
+   
+    overflow-y: auto
+    padding: 0 10px
+  &__description-text
+    +fonts($R_Reg, #596472, 12, 24, 25)
+    text-align: justify
+
+  &__list-wrap
+    width: 100%
+    padding-right: 15px
+    opacity: 0
+  &__list
+    width: 100%
+    padding-top: 25px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: stretch
+  &__item
+    width: 180px
+    +bWidth(180, 575)
+    box-sizing: border-box
+    padding-left: 36px
+    margin-bottom: 40px
+    position: relative
+    &::before
+      top: -7px
+
+  &__item-text
+    +fonts($R_Reg, #596472, 12, 20, 25)
+    display: inline-block
+    width: 100%
+    strong
+      display: block
+      width: 100%
+
+[data-location__item="1"]
+  &::before
+    content: '5'
+    +fonts($EG_Bold, #596472, 36, 36, 25)
+    position: absolute
+    left: 0
+
+[data-location__item="2"]
+  &::before
+    content: '5'
+    +fonts($EG_Bold, #596472, 36, 36, 25)
+    position: absolute
+    left: 0
+
+[data-location__item="3"]
+  &::before
+    content: '15'
+    +fonts($EG_Bold, #596472, 36, 36, 25)
+    position: absolute
+    left: -10px
+
+[data-location__item="4"]
+  &::before
+    content: '10'
+    +fonts($EG_Bold, #596472, 36, 36, 25)
+    position: absolute
+    left: -10px
+
+[data-location__item="5"]
+  &::before
+    content: '10'
+    +fonts($EG_Bold, #596472, 36, 36, 25)
+    position: absolute
+    left: -10px
+
+[data-location__item="6"]
+  &::before
+    content: '10'
+    +fonts($EG_Bold, #596472, 36, 36, 25)
+    position: absolute
+    left: -10px
+
+.gm-style-iw
+  overflow: visible !important
+  position: relative
+  div
+    overflow: visible !important
+  &::before
+    content: ''
+    width: calc(100% + 30px)
+    height: calc(100% + 18px)
+    position: absolute
+    top: -10px
+    left: -15px
+    text-align: center
+    background: #f4ede7
+  &::after
+    content: ''
+    width: 0
+    height: 0
+    border: 22px solid transparent
+    border-top-color: #f4ede7
+    z-index: 4
+    position: absolute
+    top: auto
+    left: 0
+    right: 0
+    bottom: -52px
+    margin: auto
+
+.info-name,
+.info-address
+  background: #f4ede7
+  position: relative
+  z-index: 10
+
+.info-name
+  +fonts($EG_Bold, #596472, 18, 24, 25)
+
+.info-address
+  +fonts($R_Reg, #596472, 12, 24, 25)
+//====================================
+.anim
+  .location__page-heading-top
+    opacity: 1
+    transition: opacity 1s linear .5s
+  .location__page-heading-bot
+    opacity: 1
+    transition: opacity 1s linear .7s
+  .location__description-wrap
+    opacity: 1
+    transition: opacity 1s linear 1s
+  .location__list-wrap
+    opacity: 1
+    transition: opacity 1s linear 1.2s
+//====================================
+
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1100px)
+  /**/
+  .location__left
+    padding-top: 15px
+
+  .location__heading
+    +fonts($ZI, $main-color, 50, 80, 25)
+
+  .location__left-inner
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+  .location__item
+    width: 50%
+
+@media only screen and (max-width: 992px)
+  /**/
+  .location__heading
+    +fonts($ZI, $main-color, 46, 72, 25)
+
+  .location__page-heading-bot::before,
+  .location__page-heading-bot::after
+    display: none
+
+@media only screen and (max-width: 800px)
+  /**/
+  .location__heading
+    +fonts($ZI, $main-color, 42, 72, 25)
+  .location__caption
+    +fonts($EG_Bold, $main-color, 24, 36, 25)
+
+@media only screen and (max-width: 768px)
+  /**/
+  .location__left-inner
+    height: 100%
+    padding: 0
+  .location__list
+    padding: 0
+    align-self: flex-end
+  .location__list-wrap
+    padding-left: 10px
+    position: relative
+    z-index: 5
+  .location__description
+   
+
+@media only screen and (max-width: 700px)
+  /**/
+  .location__heading
+    +fonts($ZI, $main-color, 36, 72, 25)
+  .location__page-heading::before
+    width: 300px
+    height: 300px
+  .location__page-heading::after
+    width: 286px
+    height: 286px
+  .location__caption
+    +fonts($EG_Bold, $main-color, 24, 36, 25)
+
+  .location__description-wrap
+    width: 100%
+
+  .location__description
+    width: 260px
+    margin: 0 auto
+
+  .location__list
+    width: 60%
+    margin: 0 auto
+  .location__item
+    width: 100%
+    margin-bottom: 5px
+
+@media only screen and (max-width: 600px)
+  /**/
+  .location__inner
+    flex-wrap: wrap
+    justify-content: flex-start
+  .location__left
+    padding-top: 0
+    width: 100%
+    height: 300px
+  .location__left-inner
+    overflow: auto
+    padding-top: 50px
+  .location__page-heading
+    padding: 0
+  .location__heading
+    +fonts($ZI, $main-color, 36, 56, 25)
+  .location__caption
+    +fonts($EG_Bold, $main-color, 24, 30, 25)
+  //==========================
+  .location__description-wrap
+    margin-top: 15px
+  //==========================
+  .location__list-wrap
+    padding: 0 10px
+    margin: 10px auto 0
+  .location__list
+    width: 70%
+    flex-wrap: wrap
+  .location__item
+    width: 50%
+  .location__right
+    width: 100%
+    min-height: 300px
+
+@media only screen and (max-width: 480px)
+  /**/
+  .location__description-wrap
+    width: 100%

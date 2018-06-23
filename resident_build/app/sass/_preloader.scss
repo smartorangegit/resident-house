@@ -1,0 +1,193 @@
+.preloader-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #405174;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999999;
+}
+
+/* Circle start */
+
+@keyframes svg-circle {
+    from { stroke-width: 0; }
+    to { stroke-width: 550; }
+}
+
+.svg-circle {
+    stroke: #ffffff;
+    stroke-linecap: round;
+    stroke-width: 550;
+    animation: svg-circle 2s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+/* @keyframes svg-circle {
+    0% { stroke-dashoffset: 3567;fill: transparent; }
+    80% {fill: transparent; }
+    100%{stroke-dashoffset: 0; fill: #fff;}
+}
+.svg-circle {
+
+    fill: #fff;
+    stroke:#fff;
+    stroke-width: 2px;
+    
+    stroke-dasharray: 3567;
+    stroke-dashoffset: 3567;
+
+    animation: svg-circle 2s forwards;
+} */
+
+/* Circle end */
+
+/* Letters start */
+.svg-letters {
+    fill: #405174;
+}
+@keyframes svg-letters_upper {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.svg-letters_upper path{
+    opacity: 0;
+    animation-name: svg-letters_upper;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+.svg-Saga {animation-delay: 1.6s;}
+.svg-sAga {animation-delay: 1.8s;}
+.svg-saGa {animation-delay: 2s;}
+.svg-sagA {animation-delay: 2.2s;}
+
+
+.svg-letters_lower {
+    opacity: 0;
+    animation-name: svg-letters_upper;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 2.8s;
+}
+/* Letters end */
+
+/* Loading circle start */
+@keyframes svg-loading-cirlce {
+    from {stroke-dashoffset: 435;}
+    to {stroke-dashoffset: 0;}
+}
+
+.svg-loading-circle {
+    stroke:#b5b5b5;
+    stroke-width: 2px;
+    fill: none;
+    stroke-dasharray: 435;
+    stroke-dashoffset: 435;
+    animation-name: svg-loading-cirlce;
+    animation-fill-mode: forwards;
+    animation-duration: 7s;
+}
+
+.svg-loading-circle__text {
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    fill: #b5b5b5;
+}
+/* Loading circle end */
+
+/* Outer lines start */
+@keyframes svg-outer-lines {
+    0% {stroke-dashoffset: 2684;}
+    50% {opacity:1;}
+    100% {stroke-dashoffset: 0; opacity: 0;}
+}
+.svg-outer-lines path {
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-dasharray: 2684;
+    stroke-dashoffset: 2684;
+    animation-name: svg-outer-lines;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+path.svg-outer_s {animation-delay: 3s;}
+path.svg-outer_a_1_3 {animation-delay: 3.2s;}
+path.svg-outer_a_2 {animation-delay: 3.4s;}
+path.svg-outer_a_1_1 {animation-delay: 3.6;}
+path.svg-outer_g {animation-delay: 3.8s;}
+path.svg-outer_a_1_2 {animation-delay: 4s;}
+/* Outer lines end */
+
+/* Inner lines start */
+@keyframes svg-inner-lines {
+    from {stroke-dashoffset: 185;}
+    to {stroke-dashoffset: 0;}
+}
+
+.svg-inner-lines path {
+    stroke:#405174;
+    stroke-width: 2;
+    stroke-dasharray: 185;
+    stroke-dashoffset: 185;
+    animation-name: svg-inner-lines;
+    animation-duration: 1s;
+    animation-delay: 3.1s;
+    animation-fill-mode: forwards;
+}
+
+path.svg-inner_s {animation-delay: 3.1s;}
+path.svg-inner_a_1_3 {animation-delay: 3.3s;}
+path.svg-inner_a_2 {animation-delay: 3.5s;}
+path.svg-inner_a_1_1 {animation-delay: 3.7;}
+path.svg-inner_g {animation-delay: 3.9s;}
+path.svg-inner_a_1_2 {animation-delay: 4.1s;}
+/* Inner lines end */
+
+/* Svg remove content start */
+
+@keyframes removeCircle {
+    15% {transform: translateY(20px);opacity:1}
+    100%{transform: translateY(-400px);opacity:0;}
+}
+
+.remove-svg .svg-circle {
+    animation-name: removeCircle;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.remove-svg .svg-loading-circle-container {
+    animation-name: removeCircle;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+}
+
+.preloader-container {
+    transition: all 1s 1.2s;
+}
+
+.remove-svg.preloader-container {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+/* Svg remove content end */
+
+/* Responsive svg start */
+@media only screen and (max-width: 870px) {
+    .svg-all-content {
+        transform: translate(-20%, 35%) scale(1.5);
+    }
+}
+@media only screen and (max-width: 500px) {
+    .svg-all-content {
+        transform: translate(-45%, 35%) scale(2);
+    }
+}
+/* Responsive svg end */

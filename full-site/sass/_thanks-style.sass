@@ -1,0 +1,53 @@
+@import "vars"
+
+.thanks
+  width: 100%
+  min-height: 100vh
+  padding: 100px 0 40px
+  display: flex
+  flex-direction: column
+  &__inner
+    +inner
+    flex: 1
+    display: flex
+    justify-content: flex-start
+
+  &__list
+    +bWidth(900,1180)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    margin: 10px auto 80px
+    text-align: center
+    height: 150px
+  &__item
+    width: 100%
+  &__heading
+    +fonts($EG_Bold, $main-color, 36, 36, 25)
+
+  &__caption
+    +fonts($EG_Bold, $main-color, 24, 24, 25)
+  &__link
+    +fonts($R_Bold, $main-color, 16, 22, 25)
+    text-decoration: none
+    text-transform: uppercase
+/*==========  Desktop First  ==========*/
+@media only screen and (max-width : 768px)
+  /**/
+  .thanks__inner
+    justify-content: space-between
+    align-items: center
+  .thanks__list
+    height: 240px
+
+@media only screen and (max-width : 600px)
+  /**/
+  .thanks__heading
+    +fonts($EG_Bold, $main-color, 24, 36, 25)
+  .thanks__caption
+    +fonts($EG_Bold, $main-color, 20, 24, 25)
+
+@media only screen and (max-width : 480px)
+  /**/
+  .thanks__list
+    width: 100%

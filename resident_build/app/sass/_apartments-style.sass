@@ -1,0 +1,475 @@
+@import "vars"
+
+.apartments
+  width: 100%
+  min-height: 100vh
+  padding-top: 100px
+  padding-bottom: 40px
+  background-color: #f4ede7
+  display: flex
+  flex-direction: column
+  &__inner
+    +inner
+    height: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    flex: 1
+  //====================================
+  &__page-heading
+    width: 100%
+    margin-bottom: 5px
+  &__page-heading-top
+    text-align: center
+  &__heading
+    +fonts($ZI, $main-color, 60, 70, 25)
+  //====================================
+  &__navigation
+    width: 100%
+    margin: 0 auto
+    padding: 0
+  &__nav-list
+    width: 100%
+    display: flex
+    justify-content: flex-start
+    align-items: stretch
+    flex-wrap: wrap
+  &__nav-item
+    width: 20%
+    height: 30px
+    margin-bottom: 20px
+  &__nav-link
+    +fonts($R_Reg, #596472, 12, 30, 25)
+    text-decoration: none
+  &__nav-text
+    +fonts($R_Reg, #596472, 12, 30, 25)
+  &__nav-num
+    +fonts($EG_Bold, $main-color, 30, 30, 25)
+  &__text
+    +fonts($R_Bold, #596472, 12, 16, 25)
+    color: #F9F9F9
+    align-self: center
+    transition: all 1s
+    &:hover
+      text-shadow: 0 1px 3px red
+      transition: all 1s
+
+  //====================================
+  &__nav-num-checker
+    position: relative
+    top: -2px
+    width: 35px
+    text-align: center
+    .apartments__nav-num
+      position: relative
+      left: 0
+      right: 0
+      margin: auto
+  &__nav-num-btn
+    position: absolute
+    width: 30px
+    height: 20px
+    z-index: 5
+    text-indent: -9999px
+  &__nav-num-top
+    top: -15px
+    left: 0
+    right: 0
+    margin: auto
+    background: url("../img/apartments/arrow_up_icon.png") no-repeat center center
+    outline: none
+    border: none
+  &__nav-num-bot
+    top: 100%
+    right: 0
+    left: 0
+    margin: auto
+    background: url("../img/apartments/arrow_down_icon.png") no-repeat center center
+    outline: none
+    border: none
+  //====================================
+  &__description
+    width: 100%
+    margin: 0 auto
+  &__description-inner
+    display: flex
+    justify-content: space-between
+    align-self: stretch
+  &__description-left
+    align-self: flex-end
+    width: 140px
+  &__description-center
+    width: calc(100% - 280px)
+    margin: 0 auto
+    text-align: center
+
+  &__description-center-inner
+    width: 100%
+    height: 100%
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 324px
+      height: 324px
+      border: 1px solid $border-color
+      border-radius: 50%
+    &::after
+      content: ''
+      width: 306px
+      height: 306px
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      border: 1px solid $border-color
+      border-radius: 50%
+
+  &__img-wrap
+    width: 100%
+    height: 100%
+    position: relative
+    z-index: 5
+
+  &__img
+    width: 540px
+    margin: 0 auto
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    svg
+      +img-respons
+
+  &__description-right
+    width: 140px
+    align-self: center
+
+[data-nav-item-inner="1"]
+  width: 140px
+  padding-left: 15px
+  position: relative
+  z-index: 1
+  .apartments__nav-link
+    position: relative
+    &::before
+      content: ''
+      width: 12px
+      height: 9px
+      position: absolute
+      z-index: 2
+      top: 55%
+      left: -15px
+      transform: translate(0, -50%)
+      background: url("../img/apartments/DArrow.png") no-repeat center top
+
+[data-nav-item-inner="2"]
+  width: 160px
+  padding-left: 28px
+  position: relative
+  z-index: 1
+  .apartments__nav-link
+    position: relative
+    &::before
+      content: ''
+      width: 24px
+      height: 24px
+      position: absolute
+      z-index: 2
+      top: 50%
+      left: -28px
+      transform: translate(0, -50%)
+      background: url("../img/apartments/param_icon.png") no-repeat center top
+
+[data-nav-item-inner="3"]
+  width: 85px
+  align-self: center
+  margin: 0 auto
+  height: 30px
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+[data-nav-item-inner="4"]
+  width: 140px
+  height: 100%
+  margin: 0 0 0 auto
+  position: relative
+  text-align: center
+  .apartments__nav-num,
+  .room__nav-num
+    position: absolute
+    top: -6px
+    left: 0
+
+[data-nav-item-inner="5"]
+  width: 140px
+  margin: 0 0 0 auto
+  text-align: center
+
+[data-nav-item-inner="6"]
+  width: 140px
+  height: 30px
+  position: relative
+
+//====================================
+.windrose
+  position: absolute
+  top: 0
+  &__inner
+    width: 115px
+    height: 115px
+    position: relative
+    transition: all 1s
+    +fonts($R_Reg, $main-color, 14, 14, 25)
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 72px
+      height: 72px
+      background: url("../img/compass.png") no-repeat center center / cover
+    &:hover
+      transition: all 1s
+      transform: rotate(15deg)
+  &__top
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translate(-50%, 0)
+  &__right
+    position: absolute
+    top: 50%
+    right: 0
+    transform: translate(0, -50%)
+  &__left
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translate(0, -50%)
+  &__bot
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translate(-50%, 0)
+
+//====================================
+.room-set
+  width: 140px
+  &__list
+    +bWidth(90, 140)
+  &__item
+    width: 100%
+    height: 40px
+    padding: 10px 0 10px 15px
+    text-align: center
+    position: relative
+    +fonts($R_Reg, #596472, 12, 24, 25)
+    &:after
+      content: ''
+      width: 12px
+      height: 12px
+      background-color: #fff
+      position: absolute
+      top: 15px
+      left: 0
+
+.room-set__item[data-cl='one']:after
+  background-color: #c1dc70
+
+.room-set__item[data-cl='two']:after
+  background-color: #70bfdc
+
+.room-set__item[data-cl='three']:after
+  background-color: #9e8aac
+
+.room-set__item[data-cl='four']:after
+  background-color: #776843
+//====================================
+.apartments-options
+  width: 100%
+  &__list
+    width: 100%
+  &__item
+    margin-bottom: 10px
+  &__item-inner
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    height: 60px
+    flex-wrap: wrap
+  &__num-small
+    cursor: pointer
+    width: 50%
+    +fonts($EG_Bold, $main-color, 28, 30, 25)
+    text-align: center
+    position: relative
+    top: -8px
+  &__num
+    cursor: pointer
+    width: 100%
+    height: 30px
+    display: block
+    +fonts($EG_Bold, $main-color, 36, 30, 25)
+    text-align: center
+    position: relative
+    top: -4px
+    sub
+      font-size: 18px
+    sub
+      bottom: 0
+  &__text-small
+    cursor: pointer
+    +fonts($R_Reg, #000, 12, 18, 25)
+    width: 50%
+  &__text
+    cursor: pointer
+    +fonts($R_Reg, #000, 12, 30, 25)
+    width: 100%
+    height: 30px
+    text-align: center
+
+//====================================
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px)
+  /**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px)
+  /**/
+  .apartments__img
+    width: 480px
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 768px)
+  /**/
+  .apartments
+    padding-top: 60px
+    padding-bottom: 0
+  .apartments__img
+    width: 400px
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 700px)
+  /**/
+  //====== style for apartments__navigation
+  .apartments__nav-list
+    justify-content: space-between
+
+  .apartments__nav-item
+    margin-bottom: 35px
+
+  [ data-nav-item="1"]
+    width: 50%
+  [ data-nav-item="2"]
+    width: 50%
+  [data-nav-item-inner="2"]
+    margin: 0 0 0 auto
+
+  [ data-nav-item="3"],
+  [ data-nav-item="4"],
+  [ data-nav-item="6"]
+    width: 33%
+
+  [data-nav-item-inner="3"]
+    width: 100%
+    padding-left: 10px
+    justify-content: flex-start
+
+  [ data-nav-item="5"]
+    display: none
+
+  [data-nav-item-inner="6"]
+    width: 100%
+  .windrose
+    right: 0
+    top: 50%
+    transform: translate(0, -50%)
+    &__inner
+      width: 80px
+      height: 80px
+      +fonts($R_Reg, $main-color, 10, 10, 25)
+    &__inner::before
+      width: 50px
+      height: 50px
+
+  //======/END  style apartments__navigation
+
+  .apartments__description
+    margin: 20px auto 0
+  .apartments__description-inner
+    flex-wrap: wrap
+  .apartments__description-right
+    display: none
+  .apartments__img
+    width: 90%
+  //====== style for apartments__description-center
+  .apartments__description-center
+    order: 0
+    width: 100%
+    height: 340px
+  //======/END  style for apartments__description-center
+
+  //====== style for apartments__description-left
+  .apartments__description-left
+    order: 1
+    width: 100%
+  .room-set
+    width: 100%
+    margin: 10px auto
+  .room-set__list
+    width: 90%
+    margin: 0 auto
+    display: flex
+    justify-content: flex-start
+    align-items: center
+  .room-set__item
+    width: 25%
+    text-align: left
+//======/END style for apartments__description-left
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 600px)
+  /**/
+  .apartments__heading
+    +fonts($ZI, $main-color, 36, 42, 25)
+
+  .apartments__description
+    margin: 0 auto
+  .apartments__description-center
+    height: 300px
+  .apartments__description-center-inner::before
+    width: 270px
+    height: 270px
+  .apartments__description-center-inner::after
+    width: 250px
+    height: 250px
+
+  .apartments__img
+    width: 100%
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px)
+  /**/
+  .apartments
+    padding-top: 50px
+  .apartments__heading
+    +fonts($ZI, $main-color, 30, 40, 25)
+
+  [ data-nav-item="1"]
+    width: 40%
+  [ data-nav-item="2"]
+    width: 60%
+
+  .room-set
+    margin: 0 auto
+  .room-set__list
+    width: 100%
+    flex-wrap: wrap
+  .room-set__item
+    width: 33.33%

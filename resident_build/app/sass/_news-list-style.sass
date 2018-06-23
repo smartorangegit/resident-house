@@ -1,0 +1,354 @@
+@import "vars"
+
+.news
+  width: 100%
+  min-height: 100vh
+  background-color: #f4ede7
+  padding-top: 55px
+  padding-bottom: 40px
+  display: flex
+  flex-direction: column
+  &__inner
+    flex: 1
+
+    max-width: 900px
+    +bWidth(900, 1200)
+    margin: 0 auto
+    padding: 0
+  &__page-heading
+    width: 100%
+    position: relative
+    z-index: 1
+    padding: 15px 0 0
+    margin-bottom: 50px
+    &::before
+      content: ''
+      width: 186px
+      height: 186px
+      border: 1px solid $border-color
+      border-radius: 50%
+      position: absolute
+      z-index: -1
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+    &::after
+      content: ''
+      width: 167px
+      height: 167px
+      border: 1px solid $border-color
+      border-radius: 50%
+      position: absolute
+      z-index: -1
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+  &__page-heading-top
+    position: relative
+    z-index: 2
+    text-align: center
+    opacity: 0
+  &__heading
+    text-transform: uppercase
+    +fonts($ZI, $main-color, 72, 90, 25)
+
+  &__page-heading-bot
+    width: 600px
+    margin: 0 auto
+    text-align: center
+    position: relative
+    z-index: 1
+    opacity: 0
+    &::before
+      content: ''
+      position: absolute
+      z-index: 2
+      top: 60%
+      left: 0
+      height: 1px
+      background-color: $orange-color
+      +bWidth(80, 600)
+    &::after
+      content: ''
+      position: absolute
+      z-index: 2
+      top: 60%
+      right: 0
+      height: 1px
+      background-color: $orange-color
+      +bWidth(80, 600)
+  &__caption
+    +fonts($EG_Bold, $main-color, 30, 40, 25)
+
+  &__list-wrap
+    width: 100%
+    margin-top: 20px
+    opacity: 0
+    .slick-prev
+      width: 100px
+      height: 36px
+      top: -40px
+      +fonts($EG_Bold, $main-color, 16, 36, 125)
+      color: transparent
+      &::before
+        content: 'назад'
+        +fonts($EG_Bold, $main-color, 16, 36, 125)
+        width: 50px
+        height: 36px
+        position: absolute
+        top: -3px
+        left: 25px
+      &::after
+        content: ''
+        text-transform: uppercase
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translate(0, -50%)
+        width: 20px
+        height: 36px
+        background: url("../img/arrow-icon/arrow-left.png") no-repeat center top / cover
+    .slick-next
+      width: 100px
+      height: 36px
+      top: -40px
+      +fonts($EG_Bold, $main-color, 16, 36, 125)
+      color: transparent
+      &::before
+        content: 'вперед'
+        +fonts($EG_Bold, $main-color, 16, 36, 125)
+        width: 75px
+        height: 36px
+        position: absolute
+        top: -3px
+        right: 20px
+      &::after
+        content: ''
+        text-transform: uppercase
+        position: absolute
+        top: 50%
+        right: 0
+        transform: translate(0, -50%)
+        width: 20px
+        height: 36px
+        background: url("../img/arrow-icon/arrow-right.png") no-repeat center top / cover
+  &__list
+    width: 100%
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap;
+  &__item
+    width: 33.33%
+
+  &__item-inner
+    position: relative
+    width: 96%
+    margin: 0 auto
+  &__data-time-wrap
+    background-color: rgba(#ffffff, .2)
+    width: 100%
+    padding: 0 10px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: absolute
+    z-index: 10
+    top: 0
+  &__data,
+  &__time
+    +fonts($EG_Bold, $main-color, 10, 30, 25)
+  &__img-wrap
+    width: 100%
+    height: 190px
+    overflow: hidden
+    img
+      +img-respons
+  &__text-wrap
+    border: 1px solid #ebe1d9
+    border-top: none
+    padding: 0 10px
+    position: relative
+    z-index: 5
+  &__text-heading
+    +fonts($EG_Bold, $main-color, 18, 45, 25)
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+  &__description
+    +fonts($R_Reg, #596472, 12, 24, 25)
+    text-align: justify
+    height: 100px
+    overflow-y: auto
+  &__link
+    +aBtn
+    width: 50%
+    +fonts($EG_Bold, #fff, 14, 24, 100)
+    text-transform: uppercase
+    box-sizing: border-box
+    padding: 3px 0
+    background-color: #f0ae76
+    border-left: 3px solid #2b2e34
+    margin: 20px 0 15px auto
+//==============================
+.anim
+  .news__page-heading-top
+    opacity: 1
+    transition: opacity 1s linear .5s
+  .news__page-heading-bot
+    opacity: 1
+    transition: opacity 1s linear .7s
+  .news__list-wrap
+    opacity: 1
+    transition: opacity 1s linear 1s
+
+//==============================
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px)
+  /**/
+  .news__inner
+    padding: 0 25px
+  .news__link
+    margin: 5px 0 10px auto
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px)
+  /**/
+  .news__inner
+    padding: 0 30px
+
+  .news__page-heading-bot
+    width: 100%
+    &::before,
+    &::after
+      display: none
+  .news__caption
+    width: 100%
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      z-index: 2
+      top: 60%
+      left: 0
+      height: 1px
+      background-color: $orange-color
+      width: 70px
+    &::after
+      content: ''
+      position: absolute
+      z-index: 2
+      top: 60%
+      right: 0
+      height: 1px
+      background-color: $orange-color
+      width: 70px
+  .news__text-wrap
+    padding: 0 5px
+
+  //==============================
+  .news__list
+    flex-wrap: wrap
+  .news__item
+    width: 50%
+    margin-bottom: 10px
+//==============================
+/* Small Devices, Tablets */
+@media only screen and (max-width: 800px)
+  /**/
+  .news__caption::before,
+  .news__caption::after
+    display: none
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px)
+  /**/
+  .news
+    padding-top: 35px
+  .news__heading
+    +fonts($ZI, $main-color, 42, 68, 25)
+  .news__list-wrap
+    padding: 0 10px
+/* Small Devices, Tablets */
+@media only screen and (max-width: 700px)
+  /**/
+  //=================================
+  .news__list
+    height: 400px
+    overflow: auto
+
+  .news__item
+    width: 100%
+
+  //=================================
+  .news__item-inner
+    width: 100%
+    display: flex
+    height: 180px
+    margin-bottom: 10px
+  .news__img-wrap
+    width: 50%
+    img
+      width: auto
+      height: 100%
+  .news__text-wrap
+    width: 50%
+    padding-top: 20px
+  .news__data-time-wrap
+    width: 50%
+    right: 0
+  .news__text-heading
+    +fonts($EG_Bold, $main-color, 12, 45, 25)
+  .news__description
+    +fonts($R_Reg, #596472, 10, 16, 25)
+    height: 60px
+  .news__link
+    +fonts($EG_Bold, #fff, 12, 24, 100)
+    padding: 0 0 3px
+    margin: 20px 0 0 auto
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 600px)
+  /**/
+  .news
+    padding-top: 55px
+    padding-bottom: 40px
+  .news__inner
+    padding: 0
+
+  .news__caption
+    +fonts($EG_Bold, $main-color, 24, 40, 25)
+
+  .news__page-heading
+    padding: 0 0 15px
+  .news__page-heading::before
+    top: 0
+    transform: translate(-50%, 0)
+  .news__page-heading::after
+    top: 9px
+    transform: translate(-50%, 0)
+  .news__list-wrap
+    padding: 0
+    position: relative
+    z-index: 5
+    background-color: #f4ede7
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px)
+  /**/
+  .news__inner
+    width: 100%
+    padding: 0 10px
+
+  .news__heading
+    +fonts($ZI, $main-color, 36, 68, 25)
+  .news__caption
+    +fonts($EG_Bold, $main-color, 22, 40, 25)
+
+  .news__data, .news__time
+    line-height: 2
+  .news__text-heading
+    line-height: 1.75
+  .news__link
+    width: 75%
+    margin: 10px auto 0
+

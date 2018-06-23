@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Title</title>
+  <meta name="description" content="">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <!--<meta property="og:image" content="path/to/image.jpg">-->
+
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+  <link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+<div class="all_wrapper">
+  <header class="top-head">
+    <div class="top-head__inner">
+      <div class="top-head__left">
+        <a href="index.html" class="top-head__logo">
+          <img src="img/logo.png" alt="logo-icon">
+        </a>
+      </div>
+      <div class="top-head__right">
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__ite1">
+              <div class="lang">
+                <ul class="lang__list">
+                  <li class="lang__item" data-nav-item="1">
+                    <a class="lang__link"  href="#">Укр</a>
+                  </li>
+                  <li class="lang__item">
+                    <a class="lang__link" data-nav-item="2" href="#">Рус</a>
+                  </li>
+                  <li class="lang__item" data-nav-item="3">
+                    <a class="lang__link" href="#">Eng</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
+                <i class="nav_icon">123</i>
+                <!--заказать звонок-->
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
+                <i class="nav_icon2">221</i>
+                <!--карта-->
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
+                <i class="nav_icon3">221</i>
+                <!--почта-->
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
+                <i class="nav_icon4">3221</i>
+                <!--меню-->
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!--/END top-head-->
+
+  <main class="content" role="main">
+    <div class="floor_page">
+      <div class="floor_page__left">
+
+      </div>
+      <div class="floor_page__right">
+        <a href="apartments.html">apartments</a>
+      </div>
+    </div>
+
+  </main>
+  <!--/END content-->
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <p class="footer__text"> &#169; 2017 Philadelphia усі права захищено.</p>
+      </div>
+      <div class="footer__right">
+        <div class="smart">
+          <div class="smart__logo-wrap">
+            <div class="smart__text">Розробка сайту</div>
+            <a href="#" class="smart__link">smart-link</a>
+          </div>
+        </div>
+        <!--/END smart-->
+      </div>
+    </div>
+  </footer>
+  <!--/END footer-->
+</div>
+<!--/END all_wrapper-->
+
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/slick/slick.min.js"></script>
+<script>
+
+	$('.navigation__item').on('click', function (e) {
+		e.preventDefault()
+		$(this).toggleClass('color')
+	})
+
+	$(document).ready(function () {
+		$('.param__list').slick({
+			infinite: true,
+			vertical: true,
+			slidesToShow: 5,
+			slidesToScroll: 1,
+			verticalSwiping: true
+		})
+	})
+</script>
+</body>
+</html>

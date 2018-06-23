@@ -1,0 +1,160 @@
+@import "vars"
+
+.documents
+
+  width: 100%
+  min-height: 100vh
+  padding-top: 75px
+  padding-bottom: 30px
+  display: flex
+  flex-direction: column
+
+  &__inner
+    +inner
+    height: 100%
+
+    display: flex
+    flex: 1
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+
+  //===============================
+  &__page-heading
+    width: 100%
+    position: relative
+    z-index: 1
+    margin-bottom: 50px
+    &::before
+      content: ''
+      width: 186px
+      height: 186px
+      border: 1px solid $border-color
+      border-radius: 50%
+      position: absolute
+      z-index: -1
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+    &::after
+      content: ''
+      width: 167px
+      height: 167px
+      border: 1px solid $border-color
+      border-radius: 50%
+      position: absolute
+      z-index: -1
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+  &__page-heading-top
+    position: relative
+    z-index: 2
+    text-align: center
+    opacity: 0
+  &__heading
+    text-transform: uppercase
+    +fonts($ZI, $main-color, 72, 90, 25)
+    text-transform: uppercase
+
+  &__page-heading-bot
+    +bWidth(880, 1180)
+    margin: 0 auto
+    text-align: center
+    position: relative
+    z-index: 1
+    opacity: 0
+  &__text
+    +fonts($R_Bold, $main-color, 16, 22, 25)
+    text-align: justify
+  //===============================
+  &__description
+    +bWidth(900, 1180)
+    margin: 0 auto
+    opacity: 0
+  &__link
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-wrap: wrap
+    overflow: auto
+  &__item
+    width: 25%
+    margin-bottom: 15px
+  &__link-wrap
+    width: 90%
+    //height: 240px
+    margin: 0 auto
+  &__link
+    //display: block
+    //width: 100%
+    //height: 100%
+    img
+      +img-respons
+//===============================
+.anim
+  .documents__page-heading-top
+    opacity: 1
+    transition: opacity 1s linear .5s
+  .documents__page-heading-bot
+    opacity: 1
+    transition: opacity 1s linear .7s
+  .documents__description
+    opacity: 1
+    transition: opacity 1s linear 1s
+//===============================
+/*==========  Desktop First  ==========*/
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px)
+  /**/
+  .documents__item
+    width: 33%
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px)
+  /**/
+  .documents__heading
+    +fonts($ZI, $main-color, 42, 68, 25)
+
+  .documents__description
+    height: 400px
+    overflow: auto
+  .documents__item
+    width: 50%
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 700px)
+  /**/
+  .documents__description
+    height: 500px
+  .documents__item
+    width: 80%
+    margin: 0 auto 10px
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 600px)
+  /**/
+  .documents
+    padding-top: 60px
+  .documents__page-heading-bot
+    width: 100%
+  .documents__page-heading
+    margin-bottom: 10px
+
+  .documents__heading
+    +fonts($ZI, $main-color, 36, 68, 25)
+
+  .documents__description
+    width: 100%
+    height: 450px
+  .documents__item
+    width: 50%
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px)
+  /**/
+  .documents__page-heading-bot
+    height: 150px
+    overflow: auto
+  .documents__description
+    height: 400px
