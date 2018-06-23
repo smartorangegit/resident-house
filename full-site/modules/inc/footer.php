@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer footer_relative">
 	<div class="footer__inner">
 		<div class="footer__left">
 			<p class="footer__text"><?= $mes['fut-mes1'] ?></p>
@@ -27,8 +27,6 @@
 		<time itemprop="openingHours" datetime="Mo-Fr 09:00-19:00">Пн.-Пт.: 9:00-19:00</time>
 		<time itemprop="openingHours" datetime="Sa-Su 10:00-18:00">Сб.-Вс.: 10:00-18:00</time>
 	</div>
-
-
 </footer>
 <!--/END footer-->
 
@@ -38,7 +36,6 @@
 
 </div>
 <!--/END all_wrapper-->
-
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCb1nF3LPA_ZOACIAdwgtrh0nrQd4NYybA&sensor=false"></script>
 <script  src="<?scripts('js/scripts.min.js')?>"></script>
 <style>
