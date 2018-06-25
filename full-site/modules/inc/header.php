@@ -1,4 +1,5 @@
-<? include('preloader_saga.php'); ?>
+<?php include('preloader_saga.php');?>
+
 <div class="page-preload-wrap">
 		<div class="page-preload">
 			<svg width="200px"  height="200px"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-dual-ring" style="background: none;">
@@ -12,8 +13,8 @@
 		</div>
 	</div>
 
-<?
-/* <div class="preload">
+
+<!-- <div class="preload">
 	<div class="preloader">
 		<div class="preloader__circle-set">
 			<div class="preloader__circle"></div>
@@ -51,11 +52,11 @@
 		<div class="moving__circle-text-wrap">
 			<p class="moving__circle-text-caption">resident</p>
 			<p class="moving__circle-text-descr">One and only</p>
-		</div>
+		</div> -->
 		<!--/END moving__circle-text-wrap-->
 
-	</div>
-</div> */ ?>
+	<!-- </div>
+</div> -->
 
 <script>
 		var limit = 72 * 3600 * 1000; // 72 часа
@@ -118,7 +119,11 @@
 												<a class="menu-nav__main-page-link" href="<?=UrlAdd()?>"><?= $mes['menu-item1']?></a>
 											</li>
 											<li class="about__item">
+												<a class="menu-nav__link" href="<?=UrlAdd('one-day')?>"><?= $mes['menu-item18'] ?></a>
+											</li>
+											<li class="about__item">
 												<a class="menu-nav__link" href="<?=UrlAdd('news')?>"><?= $mes['menu-item16'] ?></a>
+											</li>
 											<li class="about__item">
 												<a class="menu-nav__link" href="<?=UrlAdd('documents')?>"><?= $mes['menu-item15'] ?></a>
 											</li>
@@ -363,7 +368,6 @@
 			</a>
 			<nav class="navigation">
 				<ul class="navigation__list">
-
 					<li class="navigation__item" data-nav-item="tel">
 						<a  href="tel:<?=$mes['tel']?>" class="navigation__tel"><?= $mes['tel'] ?></a>
 					</li>
@@ -465,6 +469,7 @@
 	</div>
 	<!--/END top-head__inner-->
 </header>
+
 <style>
 .saga-logo {
     position: absolute;

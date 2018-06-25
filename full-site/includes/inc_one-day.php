@@ -313,7 +313,10 @@
 						<?= $mes['day-section-heading7'] ?>
 					</p>
 					<p class="day-step__text">
-						<?= $mes['day-section-descript-opera'] ?>
+						<?= $mes['day-section-descript-opera1'] ?>
+					</p>
+					<p class="day-step__text">
+						<?= $mes['day-section-descript-opera2'] ?>
 					</p>
 				</div>
 				<div class="day-slider-wrap">
@@ -358,7 +361,10 @@
 						<?= $mes['day-section-heading8'] ?>
 					</p>
 					<p class="day-step__text">
-						<?= $mes['day-section-descript-diner'] ?>
+						<?= $mes['day-section-descript-diner1'] ?>
+					</p>
+					<p class="day-step__text">
+						<?= $mes['day-section-descript-diner2'] ?>
 					</p>
 				</div>
 				<div class="day-slider-wrap">

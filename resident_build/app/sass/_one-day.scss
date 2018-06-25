@@ -82,8 +82,8 @@
 	}
 
 	&__img {
-		width: 100%;
-		height: 450px;
+		width: 890%;
+		height: 350px;
 	}
 
 	&__button {
@@ -106,7 +106,8 @@
 		&-wrap {
 			position: absolute;
 			bottom: 20px;
-			left: 30px;
+			left: 50%;
+			transform: translateX(-50%);
 			display: flex;
 		}
 	}
@@ -139,59 +140,59 @@
 
 .breakfast-bg-1 {
 	background: url('../img/one-day/image8.png') center center no-repeat;
-	background-size: cover;
+	background-size: contain;
 }
 .breakfast-bg-2 {
 	background: url('../img/one-day/image9.png') center center no-repeat;
-	background-size: cover;
+	background-size: contain;
 }
 .park-bg {
 	background: url('../img/one-day/image13.png') center center no-repeat;
-	background-size: cover;
+	background-size: contain;
 }
 .meting-bg-1 {
 	background: url('../img/one-day/image3.png') center center no-repeat;
-	background-size: cover;
+	background-size: contain;
 }
 .meting-bg-2 {
 	background: url('../img/one-day/image2.png') center center no-repeat;
-	background-size: cover;
+	background-size: contain;
 }
 .сathedral-bg {
 	background: url('../img/one-day/image1.png') center center no-repeat;
-	background-size: cover;
+	background-size: contain;
 }
 .lunch-bg-1 {
 	background: url('../img/one-day/image11.png') center center no-repeat;
-	background-size: cover;
+	background-size: contain;
 }
 .lunch-bg-2 {
 	background: url('../img/one-day/image6.png') center center no-repeat;
-	background-size: cover;
+	background-size: contain;
 }
 .lunch-bg-3 {
 	background: url('../img/one-day/image5.png') center center no-repeat;
-	background-size: cover;
+	background-size: contain;
 }
 .lunch-bg-4 {
 	background: url('../img/one-day/image7.png') center center no-repeat;
-	background-size: cover;
+	background-size: contain;
 }
 .gate-bg {
 	background: url('../img/one-day/image4.png') center center no-repeat;
-	background-size: cover;
+	background-size: contain;
 }
 .opera-bg-1 {
 	background: url('../img/one-day/image14.png') center center no-repeat;
-	background-size: cover;
+	background-size: contain;
 }
 .opera-bg-2 {
 	background: url('../img/one-day/image12.png') center center no-repeat;
-	background-size: cover;
+	background-size: contain;
 }
 .diner-bg {
 	background: url('../img/one-day/image10.png') center center no-repeat;
-	background-size: cover;
+	// background-size: contain;
 }
 
 
