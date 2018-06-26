@@ -110,9 +110,9 @@
 		<ul class="day-step-list">
 			<li class="day-step__item">
 				<div class="day-step-text">
-					<p class="day-step__heading">
+					<h2 class="day-step__heading">
 						<?= $mes['day-section-heading1'] ?>
-					</p>
+					</h2>
 					<p class="day-step__text">
 						<?= $mes['day-section-descript-breakfast'] ?>
 					</p>
@@ -120,10 +120,12 @@
 				<div class="day-slider-wrap">
 					<ul class="day-slider day-slider1">
 						<li class="day-slider__item">
-							<div class="day-slider__img breakfast-bg-1"></div>
+							<!-- <div class="day-slider__img breakfast-bg-1"></div> -->
+							<img src="/img/one-day/image8.png" alt="<?= $mes['day-section-heading1'] ?>" title="<?= $mes['day-section-heading1'] ?>" class="day-slider__img">
 						</li>
 						<li class="day-slider__item">
-							<div class="day-slider__img breakfast-bg-2"></div>
+							<!-- <div class="day-slider__img breakfast-bg-2"></div> -->
+							<img src="/img/one-day/image9.png" alt="<?= $mes['day-section-heading1'] ?>" title="<?= $mes['day-section-heading1'] ?>" class="day-slider__img">
 						</li>
 					</ul>
 					<div class="day-slider__button-wrap">
@@ -156,9 +158,9 @@
 
 			<li class="day-step__item">
 				<div class="day-step-text">
-					<p class="day-step__heading">
+					<h2 class="day-step__heading">
 						<?= $mes['day-section-heading2'] ?>
-					</p>
+					</h2>
 					<p class="day-step__text">
 						<?= $mes['day-section-descript-park'] ?>
 					</p>
@@ -166,7 +168,8 @@
 				<div class="day-slider-wrap">
 					<ul class="day-slider">
 						<li class="day-slider__item">
-							<div class="day-slider__img park-bg"></div>
+							<!-- <div class="day-slider__img park-bg"></div> -->
+							<img src="/img/one-day/image13.png" alt="<?= $mes['day-section-heading2'] ?>" title="<?= $mes['day-section-heading2'] ?>" class="day-slider__img">
 						</li>
 					</ul>
 				</div>
@@ -174,9 +177,9 @@
 
 			<li class="day-step__item">
 				<div class="day-step-text">
-					<p class="day-step__heading">
+					<h2 class="day-step__heading">
 						<?= $mes['day-section-heading3'] ?>
-					</p>
+					</h2>
 					<p class="day-step__text">
 						<?= $mes['day-section-descript-meting'] ?>
 					</p>
@@ -184,10 +187,12 @@
 				<div class="day-slider-wrap">
 					<ul class="day-slider day-slider2">
 						<li class="day-slider__item">
-							<div class="day-slider__img meting-bg-1"></div>
+							<!-- <div class="day-slider__img meting-bg-1"></div> -->
+							<img src="/img/one-day/image3.png" alt="<?= $mes['day-section-heading3'] ?>" title="<?= $mes['day-section-heading3'] ?>" class="day-slider__img">
 						</li>
 						<li class="day-slider__item">
-							<div class="day-slider__img meting-bg-2"></div>
+							<!-- <div class="day-slider__img meting-bg-2"></div> -->
+							<img src="/img/one-day/image2.png" alt="<?= $mes['day-section-heading3'] ?>" title="<?= $mes['day-section-heading3'] ?>" class="day-slider__img">
 						</li>
 					</ul>
 					<div class="day-slider__button-wrap">
@@ -219,9 +224,9 @@
 
 			<li class="day-step__item">
 				<div class="day-step-text">
-					<p class="day-step__heading">
+					<h2 class="day-step__heading">
 						<?= $mes['day-section-heading4'] ?>
-					</p>
+					</h2>
 					<p class="day-step__text">
 						<?= $mes['day-section-descript-сathedral'] ?>
 					</p>
@@ -229,7 +234,8 @@
 				<div class="day-slider-wrap">
 					<ul class="day-slider">
 						<li class="day-slider__item">
-							<div class="day-slider__img сathedral-bg"></div>
+							<!-- <div class="day-slider__img сathedral-bg"></div> -->
+							<img src="/img/one-day/image1.png" alt="<?= $mes['day-section-heading4'] ?>" title="<?= $mes['day-section-heading4'] ?>" class="day-slider__img">
 						</li>
 					</ul>
 				</div>
@@ -237,9 +243,9 @@
 
 			<li class="day-step__item">
 				<div class="day-step-text">
-					<p class="day-step__heading">
+					<h2 class="day-step__heading">
 						<?= $mes['day-section-heading5'] ?>
-					</p>
+					</h2>
 					<p class="day-step__text">
 						<?= $mes['day-section-descript-lunch-1'] ?>
 					</p>
@@ -250,16 +256,20 @@
 				<div class="day-slider-wrap">
 					<ul class="day-slider day-slider3">
 						<li class="day-slider__item">
-							<div class="day-slider__img lunch-bg-1"></div>
+							<!-- <div class="day-slider__img lunch-bg-1"></div> -->
+							<img src="/img/one-day/image11.png" alt="<?= $mes['day-section-heading5'] ?>" title="<?= $mes['day-section-heading5'] ?>" class="day-slider__img">
 						</li>
 						<li class="day-slider__item">
-							<div class="day-slider__img lunch-bg-2"></div>
+							<!-- <div class="day-slider__img lunch-bg-2"></div> -->
+							<img src="/img/one-day/image6.png" alt="<?= $mes['day-section-heading5'] ?>" title="<?= $mes['day-section-heading5'] ?>" class="day-slider__img">
 						</li>
 						<li class="day-slider__item">
-							<div class="day-slider__img lunch-bg-3"></div>
+							<!-- <div class="day-slider__img lunch-bg-3"></div> -->
+							<img src="/img/one-day/image5.png" alt="<?= $mes['day-section-heading5'] ?>" title="<?= $mes['day-section-heading5'] ?>" class="day-slider__img">
 						</li>
 						<li class="day-slider__item">
-							<div class="day-slider__img lunch-bg-4"></div>
+							<!-- <div class="day-slider__img lunch-bg-4"></div> -->
+							<img src="/img/one-day/image7.png" alt="<?= $mes['day-section-heading5'] ?>" title="<?= $mes['day-section-heading5'] ?>" class="day-slider__img">
 						</li>
 					</ul>
 					<div class="day-slider__button-wrap">
@@ -291,9 +301,9 @@
 
 			<li class="day-step__item">
 				<div class="day-step-text">
-					<p class="day-step__heading">
+					<h2 class="day-step__heading">
 						<?= $mes['day-section-heading6'] ?>
-					</p>
+					</h2>
 					<p class="day-step__text">
 						<?= $mes['day-section-descript-gate'] ?>
 					</p>
@@ -301,7 +311,8 @@
 				<div class="day-slider-wrap">
 					<ul class="day-slider">
 						<li class="day-slider__item">
-							<div class="day-slider__img gate-bg"></div>
+							<!-- <div class="day-slider__img gate-bg"></div> -->
+							<img src="/img/one-day/image4.png" alt="<?= $mes['day-section-heading6'] ?>" title="<?= $mes['day-section-heading6'] ?>" class="day-slider__img">
 						</li>
 					</ul>
 				</div>
@@ -309,9 +320,9 @@
 
 			<li class="day-step__item">
 				<div class="day-step-text">
-					<p class="day-step__heading">
+					<h2 class="day-step__heading">
 						<?= $mes['day-section-heading7'] ?>
-					</p>
+					</h2>
 					<p class="day-step__text">
 						<?= $mes['day-section-descript-opera1'] ?>
 					</p>
@@ -322,10 +333,12 @@
 				<div class="day-slider-wrap">
 					<ul class="day-slider day-slider4">
 						<li class="day-slider__item">
-							<div class="day-slider__img opera-bg-1"></div>
+							<!-- <div class="day-slider__img opera-bg-1"></div> -->
+							<img src="/img/one-day/image14.png" alt="<?= $mes['day-section-heading7'] ?>" title="<?= $mes['day-section-heading7'] ?>" class="day-slider__img">
 						</li>
 						<li class="day-slider__item">
-							<div class="day-slider__img opera-bg-2"></div>
+							<!-- <div class="day-slider__img opera-bg-2"></div> -->
+							<img src="/img/one-day/image12.png" alt="<?= $mes['day-section-heading7'] ?>" title="<?= $mes['day-section-heading7'] ?>" class="day-slider__img">
 						</li>
 					</ul>
 					<div class="day-slider__button-wrap">
@@ -357,9 +370,9 @@
 
 			<li class="day-step__item">
 				<div class="day-step-text">
-					<p class="day-step__heading">
+					<h2 class="day-step__heading">
 						<?= $mes['day-section-heading8'] ?>
-					</p>
+					</h2>
 					<p class="day-step__text">
 						<?= $mes['day-section-descript-diner1'] ?>
 					</p>
@@ -370,7 +383,8 @@
 				<div class="day-slider-wrap">
 					<ul class="day-slider">
 						<li class="day-slider__item">
-							<div class="day-slider__img diner-bg"></div>
+							<!-- <div class="day-slider__img diner-bg"></div> -->
+							<img src="/img/one-day/image10.png" alt="<?= $mes['day-section-heading8'] ?>" title="<?= $mes['day-section-heading8'] ?>" class="day-slider__img">
 						</li>
 					</ul>
 				</div>
