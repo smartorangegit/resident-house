@@ -7,7 +7,7 @@
 
 			<!-- START page content code-->
 			<div class="page page--current page-main">
-				<? include "includes/inc_atmosfera_page.php"?>
+				<? include "includes/inc_ctc_page.php"?>
 			</div>
 
 
