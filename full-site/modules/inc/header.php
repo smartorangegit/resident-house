@@ -203,6 +203,9 @@
 									<li class="project__item">
 										<a class="menu-nav__link" href="<?=UrlAdd('construction')?>"><?= $mes['menu-item17'] ?></a>
 									</li>
+									<li class="project__item">
+										<a class="menu-nav__link" href="<?=UrlAdd('ctc')?>">Client Technical <span class="left_left">Control</span></a>
+									</li>
 		
 				
 								</ul>
@@ -485,6 +488,10 @@
 	.saga-logo {
 		left: -32px;
 	}
+}
+@media only screen and (max-width: 600px){
+	.left_left {padding-left: 17px;}
+	.menu-nav__link {padding-left: 15px;}
 }
 @media screen and (max-width: 565px){
 	.saga-logo {
