@@ -36,6 +36,11 @@
                     <span class="contact__item-text" data-contact-text="2"><?=$mes['adres-contact']?></span>
 				</li>
 				<li class="contact__item">
+					<p class="contact__item-caption"><?=$mes['i-mesService-department']?></p>
+                    <span class="contact__item-text" data-contact-text="1">(044) 494 04 00</span>
+                    
+				</li>
+				<li class="contact__item">
 					<span class="contact__item-text" data-contact-text="3"><?=$mes['email']?></span>
 				</li>	
 			</ul>
