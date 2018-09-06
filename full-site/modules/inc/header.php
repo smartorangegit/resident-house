@@ -1,5 +1,6 @@
 <?php include('preloader_saga.php');?>
 
+<?/* Для того чтобы включить прелоадер идем в app/sass/main.sass и убираем display: none у .page-preload-wrap */?>
 <div class="page-preload-wrap">
 		<div class="page-preload">
 			<svg width="200px"  height="200px"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-dual-ring" style="background: none;">
