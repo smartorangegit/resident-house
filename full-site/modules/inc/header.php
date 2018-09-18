@@ -68,8 +68,8 @@
 		}
 	</script>
 <??>
-<header class="top-head" data-lang='<?UrlAdd();?>' 
-<? GLOBAL $SETPAGE; if($SETPAGE=='index' || $SETPAGE=='location') {	echo 'style=" background-color: rgba(255,255,255,.5);"';	} 
+<header class="top-head" data-lang='<?UrlAdd();?>'
+<? GLOBAL $SETPAGE; if($SETPAGE=='index' || $SETPAGE=='location') {	echo 'style=" background-color: rgba(255,255,255,.5);"';	}
 					else {	echo 'style=" background-color: inherit;"';	}?>
 >
 
@@ -111,7 +111,7 @@
 						<div class="menu-nav__center-wrap">
 
 							<div class="menu-nav__center-item">
-								
+
 
 								<!-- tut2<div class="document-info document-info-container"> -->
 									<div class="about">
@@ -194,7 +194,7 @@
 								<ul class="project__list">
 									<!-- <li class="menu-nav__heading">ХІД ПРОЕКТУ:</li> -->
 									<li class="menu-nav__heading"><?= $mes['menu-heading2']?></li>
-									
+
 									<li class="project__item">
 										<a class="menu-nav__link" href="<?=UrlAdd('web-camera')?>"><?= $mes['menu-webcam'] ?></a>
 									</li>
@@ -207,8 +207,8 @@
 									<li class="project__item">
 										<a class="menu-nav__link" href="<?=UrlAdd('ctc')?>">Client Technical <span class="left_left">Control</span></a>
 									</li>
-		
-				
+
+
 								</ul>
 							</div>
 
@@ -221,7 +221,7 @@
 									<a class="menu-nav__link" href="<?=UrlAdd('location')?>"><?= $mes['menu-item6'] ?></a>
 								</li>
 							</ul>
-								
+
 
 								<!--/END about-->
 							</div>
@@ -280,17 +280,17 @@
 
 								<div class="menu-logo">
 									<div class="menu-logo__inner">
-										
+
 									</div>
 								</div>
 
 								<div class="about">
-									
+
 								</div>
 								<!--/END about-->
 
 								<div class="project">
-									
+
 								</div>
 								<!--/END project-->
 
@@ -300,8 +300,8 @@
 										<button class="btn-close"></button>
 									</div>
 								</div>
-								
-								
+
+
 <?/*
 								<div class="apartment">
 									<h2 class="apartment__heading"><?= $mes['menu-heading3'] ?></h2>
@@ -326,7 +326,7 @@
 								</div>
 								<!--/END apartment-->
 */?>
-								
+
 								<!--/END for-sale-->
 <?/*
 								<div class="callback-wrap form-call">
@@ -368,17 +368,20 @@
 
 		<div class="top-head__right" style="position: relative;">
 			<a href="http://saga-development.com.ua/" class="saga-logo <?if(count(explode("/", $_SERVER['REQUEST_URI']))>2){echo 'saga_logo_off';}?>" target="_blank">
-			  <img src="/img/manager/saga-logo.svg">
+				<img src="/img/manager/saga-logo.svg">
 			</a>
 			<nav class="navigation">
 				<ul class="navigation__list">
+
+					<!-- <li class="navigation__item">
+					</li> -->
 					<li class="navigation__item" data-nav-item="tel">
 						<a  href="tel:<?=$mes['tel']?>" class="navigation__tel"><?= $mes['tel'] ?></a>
 					</li>
 					<!--/END navigation__item-->
 
 
-	<?php 
+	<?php
 				/** Прибираєм плашку мови, якщо в config.php $len='' */
 							?>
 					<li class="navigation__item">
@@ -389,42 +392,42 @@
 								<li class="lang__item" data-nav-item="1">
 									<a class="lang__link" ><?=$mes['fut-mes4']?></a>
 								</li>
-							<?  
-							
+							<?
+
 							GLOBAL $LANG, $SETPAGE;
-							$LANGS=$len;	$LANGS[]=$len_default; 
-							
+							$LANGS=$len;	$LANGS[]=$len_default;
+
 							$correct_mas=explode("/", $_SERVER['REQUEST_URI']);
-							
+
 							if ($LANG==$len_default) {	$t_LANG='/';	}
 							else {	$t_LANG='/'.$LANG;	}
-							
+
 																foreach ($LANGS as $t){
 										if ($t==$mes['fut-mes3']) {	continue;	}
-										
+
 										$mes_t = parse_ini_file('modules/language/'.$t.'.ini'); ;
-										$tHref='/'.$t.'/';	
+										$tHref='/'.$t.'/';
 										if ($t==$len_default) {$t=$len_default; $tHref='/';}
-															
-								
-								if(in_array($correct_mas[1], $LANGS, true)) {		
+
+
+								if(in_array($correct_mas[1], $LANGS, true)) {
 
 									$Href=str_replace('/'.$correct_mas[1].'/', $tHref, $_SERVER['REQUEST_URI']);
-							
+
 								} else {
-									
+
 									$Href='/'.$t.$_SERVER['REQUEST_URI'];
 								}
 									if ($SETPAGE=='news-open') {	$Href=$tHref.'news/';	}
-										
-										
+
+
 									echo '
 									<li class="lang__item">
 										<a class="lang__link" data-nav-item="2" href="'.$Href.'">'.$mes_t['fut-mes4'].'</a>
 									</li>';
-									
+
 									}
-																
+
 								?>
 
 							</ul>
@@ -433,14 +436,13 @@
 						<!--/END lang-->
 								<?} /***/ ?>
 					</li>
-			
 
-					<li class="navigation__item mob_knopa" id="form-call" data-tel-link="pc">
+
+					<!-- <li class="navigation__item mob_knopa" id="form-call" data-tel-link="pc">
 						<a href="#" class="navigation__link">
 							<i class="phone-icon"></i>
-							<!--заказать звонок-->
 						</a>
-					</li>
+					</li> -->
 
 					<li class="navigation__item" data-tel-link="mob">
 						<a href="tel:<?=$mes['tel']?>1" class="navigation__link">
@@ -455,7 +457,7 @@
 							<!--карта-->
 						</a>
 					</li>
-					
+
 					<li class="navigation__item">
 						<a href="<?=UrlAdd('contact')?>" class="navigation__link">
 							<i class="mail-icon"></i>
@@ -465,16 +467,40 @@
 					<li class="callback__inner form-call desc_knopa">
 						<a href="" class="callback__link"><?= $mes['menu-callback'] ?></a>
 						<!--кнопка заказать звонок-->
-						<style>.navigation__list{width: 100%;}</style>
 					</li>
 					<style>
+					.top-head__left, .top-head__right{
+						width: auto;
+					}
+					.navigation__list{width: 100%;}
+					.navigation .callback__link{
+						padding: 0 10px 0 30px;
+					}
+					.navigation__list > *{
+						margin-left: 10px;
+					}
+					.navigation .callback__link:before{
+						top: 56%;
+						left: 8px;
+					}
 					@media only screen and (max-width: 1158px) {
-						.desc_knopa {display:none;}
-									
+						.desktop__word {display:none;}
+
 					}
-					@media only screen (max-width: 600px),(min-width: 1158px) {
-						.mob_knopa {display:none;}	
+					@media only screen and (max-width:992px) {
+						.navigation .callback__inner {
+							    width: auto;
+							    margin: 0 16px;
+							}
 					}
+					@media only screen and (max-width: 882px){
+						[data-tel-link=mob] {
+							display: block;
+									}
+						.desc_knopa{
+							display: none;
+							}
+								}
 					</style>
 					<li class="navigation__item" id="menu-btn">
 						<a href="#" class="navigation__link">
@@ -493,18 +519,15 @@
 <style>
 .saga-logo {
     position: absolute;
-    top: -12px;
-    left: 13%;
+    top: -5px;
+    left: -70px;
     display: block;
     width: 60px;
-    z-index: 40;
-    text-align: center;
-    overflow: hidden;
-}
-@media screen and (max-width: 1220px){
-	.saga-logo {
-		left: -76px;
-	}
+    }
+@media screen and (max-width: 882px){
+ .saga-logo{
+	 top: -15px;
+ }
 }
 @media only screen and (max-width: 600px){
 	.left_left {padding-left: 17px;}
