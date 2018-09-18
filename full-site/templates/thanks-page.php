@@ -6,7 +6,7 @@
 	<main class="content" role="main">
 		<div class="content__inner pages">
 			<!-- NAVIGATION LINK on page-->
-			<? include "includes/inc_nav-link.php"?>
+			<? /* include "includes/inc_nav-link.php" */?>
 			<!-- /END NAVIGATION LINK on page-->
 
 			<!-- START page content code-->

@@ -26,7 +26,7 @@
 			<div class="options__params-wrap">
 			  <div class="options__params-inner">
 				<div class="options__params-left">
-				  <a href="javascript:history.go(-1)" mce_href="javascript:history.go(-1)"  class="options__params-link-back">
+				  <a href="<?=UrlAdd('apartment')?>" class="options__params-link-back">
 					<?=$mes['news-backbtn']?>
 				  </a>
 				</div>
