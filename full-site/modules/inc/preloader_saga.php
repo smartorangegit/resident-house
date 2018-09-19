@@ -117,7 +117,7 @@
                     }
                     // Updates a div that displays the current percent
                     loadingCircleText.innerHTML = currentPercent + '%';
-                }, 40);
+                }, 20);
             });
         }
 

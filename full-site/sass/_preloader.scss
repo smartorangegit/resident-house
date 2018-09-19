@@ -20,7 +20,7 @@
     stroke-linecap: round;
     stroke-width: 550;
     animation: svg-circle 2s;
-    animation-delay: 1s;
+    animation-delay: 0.6s;
     animation-fill-mode: both;
 }
 
@@ -88,7 +88,7 @@
     stroke-dashoffset: 435;
     animation-name: svg-loading-cirlce;
     animation-fill-mode: forwards;
-    animation-duration: 7s;
+    animation-duration: 3s;
 }
 
 .svg-loading-circle__text {
