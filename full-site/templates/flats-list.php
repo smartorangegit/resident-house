@@ -2,12 +2,12 @@
 <div class="all_wrapper">
 
 	<?php HeaderInclude();?>
-	
+
   <main class="content" role="main">
 	<div class="content__inner pages">
-	  
-	  
-	  
+
+
+
 	  <!-- START page content code-->
 	  <div class="page page--current">
 		<div class="room">
@@ -106,9 +106,11 @@
 
 					<div class="room__img-wrap">
 					  <div class="room__img">
-				
+
 						<!--<img class="room__img-horizontal" src="/img/room/png/1_b.png" alt="/">-->
-						<a target='_blank' href='<?=$img_flat?>'><img class="<?=$classImg?>" <?img($img_flat)?>  <?AltImgAdd($mes['apartments-parameters8'].' '.$number)?>></a>
+					<?	/*<a target='_blank' href='<?=$img_flat?>'><img class="<?=$classImg?>" <?img($img_flat)?>  <?AltImgAdd($mes['apartments-parameters8'].' '.$number)?>></a>*/?>
+						<img class="<?=$classImg?> open_room_modal" <?img($img_flat)?>  <?AltImgAdd($mes['apartments-parameters8'].' '.$number)?>>
+
 					  </div>
 					</div>
 					<!--/END room__img-wrap-->
@@ -122,7 +124,7 @@
 				</div>
 				<!--/END room__description-center-->
 <?
-			
+
 			//echo '<pre>'; print_r($mas1); echo '</pre>';
 			?>
 				<div class="room__description-right">
@@ -133,15 +135,15 @@
 
 
 					<ul class="room-options__list" id="room-options__list">
-			
+
 					 <?foreach($mas2 as $k=>$s){  if($s){ ?>
 				  <li class="room-options__item">
-				 
+
 						<div class="room-options__item-inner">
 						  <p class="room-options__num"><?=str_replace('.',',',$s);?><sub><?=$mes['м2']?></sub></p>
 						  <p class="room-options__text"><?=$mas1[$k]?></p>
 						</div>
-				  </li>	 
+				  </li>
 				 <?}}?>
 					  <!--/END room-options__list-->
 
@@ -162,13 +164,61 @@
 		</div>
 		<!--/END room-->
 	  </div>
-	  
-	</div>  
-	  
-	  
-	  
-	  
-	  
+
+	</div>
+
+
+	<div class="room_modal_window">
+		<div class="room_modal_close">×</div>
+		<div class="room_modal__inner">
+			<img  <?img($img_flat)?>  <?AltImgAdd($mes['apartments-parameters8'].' '.$number)?>>
+
+		</div>
+
+	</div>
+
+
+
+<style media="screen">
+	.room_modal_window{
+		width: 96%;
+		height: 96%;
+		background: #f4ede7;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		padding: 30px;
+		z-index: 999;
+		display: none;
+	}
+	.room_modal__inner{
+		width: 100%;
+		height: 100%;
+	}
+	.room_modal__inner img{
+		max-width: 100%;
+    display: block;
+    max-height: 100%;
+    margin: 0 auto;
+	}
+	.room_modal_close{
+		position: absolute;
+		font-family: 'ZamenhofInverse';
+    font-size: 70px;
+    text-transform: uppercase;
+		right: -7px;
+    top: 7px;
+    line-height: 36px;
+		cursor: pointer;
+	}
+	.open_room_modal{
+		cursor: pointer;
+	}
+
+</style>
+
 	<!--/END content__inner-->
   </main>
   <!--/END content-->
@@ -177,6 +227,12 @@
 <?php /*** modules/inc/form/ */ FormInclude('form_apartments');?>
 
 <?php	 FooterAdd();?>
+<script type="text/javascript">
+$('.open_room_modal').click(function(){
+	$('.room_modal_window').fadeIn(800)
+});
+$('.room_modal_close').click(function(){
+	$('.room_modal_window').fadeOut(800)
+});
 
-
-
+</script>
