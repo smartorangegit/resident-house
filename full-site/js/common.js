@@ -432,7 +432,7 @@ $(function () {
 
     var formPrice = $($('#price-form-tamplate').html());
 
-    $('.room_info__btn').magnificPopup({
+    $('.room_info__btn, .link_seven_hundred_px').magnificPopup({
         removalDelay: 300,
         mainClass: 'mfp-fade',
         items: {

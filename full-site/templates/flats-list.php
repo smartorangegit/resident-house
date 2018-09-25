@@ -95,7 +95,7 @@
 						 <?include(svg_plan($si['img']));?>
 					  </li>
 					  <li class="roomer__item" data-roomer-item="4">
-						<a href="#" class="roomer__link" id="room_info__btn" data-roomer-link="3"><?=$mes['Дізнатися ціну']?></a>
+						<a href="#" class="roomer__link link_seven_hundred_px" id="room_info__btn" data-roomer-link="3"><?=$mes['Дізнатися ціну']?></a>
 					  </li>
 					</ul>
 				  </div>
