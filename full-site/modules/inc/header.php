@@ -1,4 +1,24 @@
-<?php include('preloader_saga.php');?>
+<?php include('preloader_saga.php');
+session_start();
+/*Utm 01.02.2018*/
+if ($_GET)
+{
+    $utm=array(
+        'utm_source' ,
+        'utm_medium',
+        'utm_campaign' ,
+        'utm_term',
+        'utm_content'
+    );
+    foreach($_GET as $key=>$t)
+    {
+        $metka= array_search($key,$utm);
+        if ($metka!==FALSE)
+        {
+            $_SESSION[$utm[$metka]]=$t;
+        }
+    }
+}?>
 
 <?/* Для того чтобы включить прелоадер идем в app/sass/main.sass и убираем display: none у .page-preload-wrap */?>
 <div class="page-preload-wrap">
@@ -147,6 +167,9 @@
 										</li>
 										<li class="about__item">
 											<a class="menu-nav__link" href="<?=UrlAdd('values')?>"><?= $mes['menu-item7'] ?></a>
+										</li>
+										<li class="about__item">
+											<a class="menu-nav__link" href="<?=UrlAdd('underground-parking')?>"><?= $mes['underground-parking-h1'] ?></a>
 										</li>
 										<li class="about__item">
 											<a class="menu-nav__link" href="<?=UrlAdd('atmosfera')?>">SFERA Living System</a>
