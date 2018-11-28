@@ -1,4 +1,6 @@
-<?session_start(); /*All function*/ require_once('modules/function.php');  
+<?session_start(); /*All function*/ 
+require_once('modules/function.php');  
+require_once("modules/redirect.php");									 
 $file_link='';
 $correct_link=$_SERVER['REQUEST_URI']; global $site,$SETPAGE, $mes;
 $pos      = strripos($correct_link, "?");
@@ -37,6 +39,16 @@ if(strpos($correct_link, 'admin/')!== false){ enterAdminka($correct_link); }
 if(end($correct_mas) AND $pos===false){	header("Location:".$correct_link."/");}
 
 
+if($redirectUrl) 
+{
+	foreach ($redirectUrl as $key=>$t) {	
+		if ($correct_link==$key) {
+				
+			header( 'Location: '.$site_url.'/'.$t, true, 301 );
+			exit;
+		}
+	}
+}
 if(in_array($correct_mas[1], $len, true)) {	$_POST['lang']=$correct_mas[1].'/';}else{$_POST['lang']='';}
 if($_POST['lang']==''){$LANG=$len_default;}else{$LANG=substr($_POST['lang'], 0,2);}
 
